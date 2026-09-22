@@ -1,7 +1,9 @@
-
+import { useSelector } from "react-redux";
 import { Slide, ToastContainer } from "react-toastify";
+import type { RootState } from "../../Redux/store";
 
 function Toast() {
+  const theme = useSelector((state: RootState) => state.theme.theme);
   return (
     <ToastContainer
       position="top-left"
@@ -14,7 +16,7 @@ function Toast() {
       pauseOnFocusLoss
       draggable
       pauseOnHover
-      theme="light"
+      theme={theme}
       transition={Slide}
     />
   );
