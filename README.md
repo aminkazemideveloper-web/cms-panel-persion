@@ -1,5 +1,9 @@
 # CMS Panel
 
+## 🚀 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success)](https://cms-farsi.netlify.app)
+
 A modern and responsive **Content Management System (CMS) Dashboard** built with React, TypeScript, and Vite.
 
 This project provides a dashboard interface for managing users, courses, and articles with reusable components, form validation, API integration, state management, and responsive UI.
