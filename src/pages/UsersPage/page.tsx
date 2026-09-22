@@ -10,7 +10,7 @@ import UsersSkeleton from "../../skeletons/UsersSkeleton/UsersSkeleton";
 import Load from "../../Components/Load/Load";
 
 function UsersPage() {
-  const { data: users, isPending, isFetching } = useGetAllUsers();
+  const { data: users, isPending, isFetching, isFetched } = useGetAllUsers();
   useTitle("کاربران");
 
   if (isPending) {
@@ -20,7 +20,7 @@ function UsersPage() {
   return (
     <>
       {isFetching && <Load />}
-      <Users users={users} />
+      <Users users={users} loading={isFetched} />
     </>
   );
 }

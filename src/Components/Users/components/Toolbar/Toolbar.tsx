@@ -2,18 +2,21 @@ import { BiPlus } from "react-icons/bi";
 import Button from "../../../Button/Button";
 import SearchBox from "../../../SearchBox/SearchBox";
 import styles from "./Toolbar.module.css";
+import Load from "../../../Load/Load";
 
 type Props = {
   onShowModal: () => void;
+  onSearch: (value: string) => void;
+  loading: boolean;
 };
 
-function Toolbar({ onShowModal }: Props) {
+function Toolbar({ onShowModal, onSearch, loading }: Props) {
   return (
     <div className={styles.toolbar}>
-      <SearchBox />
+      <SearchBox onSearch={onSearch} loading={loading} />
 
       <Button onClick={onShowModal} color="primary" varient="solid">
-        <BiPlus className={styles.icon} />
+         <BiPlus className={styles.icon} />
         <span className={styles.text}>کاربر جدید</span>
       </Button>
     </div>
