@@ -1,0 +1,7 @@
+.divider {
+  display: block;
+  inline-size: 2px;
+  height: 1rem;
+  border-radius: 999rem;
+  background-color: var(--color-border);
+}

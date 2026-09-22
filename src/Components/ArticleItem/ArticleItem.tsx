@@ -1,5 +1,5 @@
-import Button from "../Button/Button";
-import "./ArticleItem.css";
+import styles from "./ArticleItem.module.css";
+
 import { HiOutlineRectangleGroup } from "react-icons/hi2";
 import { MdManageAccounts } from "react-icons/md";
 import type { ArticleType } from "../../types/article-type";
@@ -8,6 +8,10 @@ import { useRef } from "react";
 import RemoveModal from "../../modals/RemoveModal/RemoveModal";
 import { toast } from "react-toastify";
 import { BiSolidEdit, BiTrash } from "react-icons/bi";
+import TiTleSectionItem from "../TiTleSectionItem/TiTleSectionItem";
+import SubGroup from "../SubGroup/SubGroup";
+import Divider from "../Divider/Divider";
+import Button from "../Button/Button";
 
 type Props = {
   article: ArticleType;
@@ -36,37 +40,32 @@ function ArticleItem({ article }: Props) {
     });
   };
   return (
-    <div className="articleItem__wrapper">
-      <div className="articleItem__right">
+    <div className={styles["articleItem__wrapper"]}>
+      <div className={styles["image-box"]}>
         <img
-          className="articleItem__right--img"
+          className={styles.image}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSix75tPSUhzi38lV9hHrmIk2YzgUHxI1tRrw&s"
           alt=""
         />
       </div>
-      <div className="articleItem__left">
-        <div className="articleItem__left--top">
-          <span className="articleItem__left--top-title">{title}</span>
-          <span className="articleItem__left--top-desc">{desc}</span>
-        </div>
-        <div className="articleItem__left--bottom">
-          <div className="articleItem__left--bottom--right">
-            <div className="articleItem__left--bottom--right-group">
-              <span className="articleItem__left--bottom--right-group--icon">
-                <HiOutlineRectangleGroup />
-              </span>
-              <span>دسته بندی:</span>
-              <span>{category}</span>
-            </div>
-            <div className="articleItem__left--bottom--right-count">
-              <span className="articleItem__left--bottom--right-count--icon">
-                <MdManageAccounts />
-              </span>
-              <span>تعداد بازدید:</span>
-              <span>{views}</span>
-            </div>
+      <div className={styles.writing}>
+        <TiTleSectionItem title={title} sub={desc} />
+        <div className={styles.detailes}>
+          <div className={styles.content}>
+            <SubGroup
+              icon={<HiOutlineRectangleGroup />}
+              lable="دسته بندی"
+              value={category}
+            />
+            <Divider />
+
+            <SubGroup
+              icon={<MdManageAccounts />}
+              lable="تعداد بازدید"
+              value={views}
+            />
           </div>
-          <div className="articleItem__left--bottom--left">
+          <div className={styles.actions}>
             <Button
               color="danger"
               varient="solid"

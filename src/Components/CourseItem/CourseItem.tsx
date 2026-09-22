@@ -9,6 +9,9 @@ import RemoveModal from "../../modals/RemoveModal/RemoveModal";
 import { useRef } from "react";
 import { useRemoveCourse } from "../../services/hooks/courses/useRemoveCourse";
 import { toast } from "react-toastify";
+import TiTleSectionItem from "../TiTleSectionItem/TiTleSectionItem";
+import SubGroup from "../SubGroup/SubGroup";
+import Divider from "../Divider/Divider";
 
 type Props = {
   course: CourseType;
@@ -47,43 +50,23 @@ function CourseItem({ course }: Props) {
         />
       </div>
       <div className="courseItem__left">
-        <div className="courseItem__left--top">
-          <span className="courseItem__left--top-title">{title}</span>
-          <span className="courseItem__left--top-desc">{desc}</span>
-        </div>
+        <TiTleSectionItem title={title} sub={desc} />
+
         <div className="courseItem__left--bottom">
           <div className="courseItem__left--bottom--right">
-            <div className="courseItem__left--bottom--right-price">
-              <span className="courseItem__left--bottom--right-price-icon">
-                <FaSackDollar />
-              </span>
-              <span className="courseItem__left--bottom--right-price-tag">
-                قیمت:
-              </span>
-              {price !== 0 ? (
-                <span>{price.toLocaleString()}</span>
-              ) : (
-                <span>رایگان</span>
-              )}
-            </div>
-            <div className="courseItem__left--bottom--right-group">
-              <span className="courseItem__left--bottom--right-group-icon">
-                <HiOutlineRectangleGroup />
-              </span>
-              <span className="courseItem__left--bottom--right-group-tag">
-                دسته بندی:
-              </span>
-              <span>{category}</span>
-            </div>
-            <div className="courseItem__left--bottom--right-count">
-              <span className="courseItem__left--bottom--right-count-icon">
-                <MdManageAccounts />
-              </span>
-              <span className="courseItem__left--bottom--right-count-tag">
-                تعداد فروش:
-              </span>
-              <span>{registersCount}</span>
-            </div>
+            <SubGroup icon={<FaSackDollar />} lable="قیمت" value={price} />
+            <Divider height="1rem" />
+            <SubGroup
+              icon={<HiOutlineRectangleGroup />}
+              lable="دسته بندی"
+              value={category}
+            />
+            <Divider height="1rem" />
+            <SubGroup
+              icon={<MdManageAccounts />}
+              lable="تعدادفروش"
+              value={registersCount}
+            />
           </div>
           <div className="courseItem__left--bottom--left">
             <Button
