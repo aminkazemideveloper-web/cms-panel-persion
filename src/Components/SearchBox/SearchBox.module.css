@@ -1,0 +1,74 @@
+.search {
+  display: flex;
+  align-items: center;
+
+  block-size: 2rem;
+  inline-size: min(35rem, calc(100% - 1rem));
+
+  box-shadow: 0 0 3px var(--color-border);
+  background-color: transparent;
+  border-radius: 999rem;
+  overflow: hidden;
+
+  > button {
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 2.5rem;
+    block-size: 100%;
+    flex-shrink: 0;
+    font-size: var(--font-size-400);
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-primary-hover);
+      > svg {
+        transform: scale(1.1);
+      }
+    }
+  }
+  > input {
+    min-inline-size: 0;
+    flex-grow: 1;
+    padding: 1rem 2rem;
+    outline: none;
+    font-size: var(--font-size-400);
+    color: var(--color-text);
+    border: none;
+    background-color: inherit;
+    &::placeholder {
+      color: var(--color-text--sub);
+      font-size: var(--font-size-300);
+      font-weight: 300;
+    }
+  }
+
+  &:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .search {
+    block-size: 2.5rem;
+    > button {
+      inline-size: 4rem;
+    }
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 992px) {
+  .search {
+    block-size: 3rem;
+    > button {
+      inline-size: 5rem;
+    }
+  }
+}

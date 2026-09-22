@@ -1,0 +1,37 @@
+.skeleton {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-border);
+
+  &.text {
+    height: 16px;
+    border-radius: 4px;
+  }
+  &.circular {
+    border-radius: 999rem;
+  }
+  &.rounded {
+    border-radius: 8px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    animation: skeleton-wave 1.5s infinite;
+  }
+}
+
+@keyframes skeleton-wave {
+  100% {
+    transform: translateX(100%);
+  }
+}

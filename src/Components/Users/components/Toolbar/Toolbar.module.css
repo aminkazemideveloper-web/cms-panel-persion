@@ -1,0 +1,35 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      display: flex;
+      font-size: var(--font-size-600);
+      font-weight: 600;
+    }
+    .text {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 999px) {
+  .toolbar {
+    > button {
+      .icon {
+        font-size: var(--font-size-400);
+        font-weight: 400;
+      }
+      .text {
+        font-size: var(--font-size-200);
+        display: flex;
+      }
+    }
+  }
+}

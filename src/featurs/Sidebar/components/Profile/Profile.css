@@ -1,0 +1,76 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 5rem;
+}
+
+.profile--title {
+  font-size: var(--font-size-500);
+  font-family: "morabbaMed";
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.profile--mail {
+  font-size: var(--font-size-300);
+  color: var(--color-text--sub);
+}
+
+@media screen and (min-width: 320px) {
+  .profile {
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  .profile--title {
+    font-weight: 400;
+  }
+  /* .profile--mail {
+    font-size: 0.5rem;
+  } */
+}
+
+@media screen and (min-width: 576px) {
+  .profile {
+    gap: 0.6rem;
+    margin-top: 3rem;
+  }
+  /* .profile--title {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  .profile--mail {
+    font-size: 0.6rem;
+  } */
+}
+
+@media screen and (min-width: 768px) {
+  .profile {
+    gap: 0.7rem;
+    margin-top: 4rem;
+  }
+  /* 
+  .profile--title {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .profile--mail {
+    font-size: 0.7rem;
+  } */
+}
+
+@media screen and (min-width: 992px) {
+  .profile {
+    gap: 0.8rem;
+    margin-top: 5rem;
+  }
+
+  /* .profile--title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .profile--mail {
+    font-size: 0.8rem;
+  } */
+}

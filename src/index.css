@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  caret-color: var(--color-primary);
+  accent-color: var(--color-primary);
+}
+
+body {
+  background-color: var(--color-surface--1);
+  font-family: "danaMed";
+  color: var(--color-text);
+}
+
+input,
+select,
+button,
+textarea {
+  font-family: inherit;
+}

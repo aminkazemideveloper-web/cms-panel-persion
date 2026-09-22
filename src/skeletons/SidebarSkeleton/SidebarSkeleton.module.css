@@ -1,0 +1,31 @@
+.sidebar-skeleton {
+  inline-size: min(17rem, calc(100% - 1rem));
+  display: grid;
+  gap: 2rem;
+  align-content: start;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 100%;
+  }
+
+  .heading {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .detailes {
+    inline-size: 100%;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .btn {
+    inline-size: 100%;
+    text-align: center;
+  }
+}

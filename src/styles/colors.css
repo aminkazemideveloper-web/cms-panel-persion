@@ -1,0 +1,110 @@
+:root {
+  color-scheme: light;
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+
+  --color-blue-100: hsl(212, 71%, 93%);
+  --color-blue-200: hsl(212, 71%, 83%);
+  --color-blue-300: hsl(212, 71%, 73%);
+  --color-blue-400: hsl(212, 71%, 63%);
+  --color-blue-500: hsl(212, 71%, 53%);
+  --color-blue-600: hsl(212, 71%, 43%);
+  --color-blue-700: hsl(212, 71%, 33%);
+  --color-blue-800: hsl(212, 71%, 23%);
+  --color-blue-900: hsl(212, 71%, 13%);
+
+  --color-gray-100: hsl(0, 0%, 93%);
+  --color-gray-200: hsl(0, 0%, 83%);
+  --color-gray-300: hsl(0, 0%, 73%);
+  --color-gray-400: hsl(0, 0%, 63%);
+  --color-gray-500: hsl(0, 0%, 53%);
+  --color-gray-600: hsl(0, 0%, 43%);
+  --color-gray-700: hsl(0, 0%, 33%);
+  --color-gray-800: hsl(0, 0%, 23%);
+  --color-gray-900: hsl(0, 0%, 13%);
+
+  --color-yellow-100: hsl(32, 69%, 93%);
+  --color-yellow-200: hsl(32, 69%, 83%);
+  --color-yellow-300: hsl(32, 69%, 73%);
+  --color-yellow-400: hsl(32, 69%, 63%);
+  --color-yellow-500: hsl(32, 69%, 53%);
+  --color-yellow-600: hsl(32, 69%, 43%);
+  --color-yellow-700: hsl(32, 69%, 33%);
+  --color-yellow-800: hsl(32, 69%, 23%);
+  --color-yellow-900: hsl(32, 69%, 13%);
+
+  --color-red-100: oklch(93.6% 0.032 17.717);
+  --color-red-200: oklch(88.5% 0.062 18.334);
+  --color-red-300: oklch(80.8% 0.114 19.571);
+  --color-red-400: oklch(70.4% 0.191 22.216);
+  --color-red-500: oklch(63.7% 0.237 25.331);
+  --color-red-600: oklch(57.7% 0.245 27.325);
+  --color-red-700: oklch(50.5% 0.213 27.518);
+  --color-red-800: oklch(44.4% 0.177 26.899);
+  --color-red-900: oklch(39.6% 0.141 25.723);
+
+  --color-green-50: oklch(97.9% 0.021 166.113);
+  --color-green-100: oklch(95% 0.052 163.051);
+  --color-green-200: oklch(90.5% 0.093 164.15);
+  --color-green-300: oklch(84.5% 0.143 164.978);
+  --color-green-400: oklch(76.5% 0.177 163.223);
+  --color-green-500: oklch(69.6% 0.17 162.48);
+  --color-green-600: oklch(59.6% 0.145 163.225);
+  --color-green-700: oklch(50.8% 0.118 165.612);
+  --color-green-800: oklch(43.2% 0.095 166.913);
+  --color-green-900: oklch(37.8% 0.077 168.94);
+  --color-green-950: oklch(26.2% 0.051 172.552);
+
+  --color-purple-50: oklch(96.9% 0.016 293.756);
+  --color-purple-100: oklch(94.3% 0.029 294.588);
+  --color-purple-200: oklch(89.4% 0.057 293.283);
+  --color-purple-300: oklch(81.1% 0.111 293.571);
+  --color-purple-400: oklch(70.2% 0.183 293.541);
+  --color-purple-500: oklch(60.6% 0.25 292.717);
+  --color-purple-600: oklch(54.1% 0.281 293.009);
+  --color-purple-700: oklch(49.1% 0.27 292.581);
+  --color-purple-800: oklch(43.2% 0.232 292.759);
+  --color-purple-900: oklch(38% 0.189 293.745);
+  --color-purple-950: oklch(28.3% 0.141 291.089);
+
+  --color-zinc-50: oklch(98.5% 0 none);
+  --color-zinc-100: oklch(96.7% 0.001 286.375);
+  --color-zinc-200: oklch(92% 0.004 286.32);
+  --color-zinc-300: oklch(87.1% 0.006 286.286);
+  --color-zinc-400: oklch(70.5% 0.015 286.067);
+  --color-zinc-500: oklch(55.2% 0.016 285.938);
+  --color-zinc-600: oklch(44.2% 0.017 285.786);
+  --color-zinc-700: oklch(37% 0.013 285.805);
+  --color-zinc-800: oklch(27.4% 0.006 286.033);
+  --color-zinc-900: oklch(21% 0.006 285.885);
+  --color-zinc-950: oklch(14.1% 0.005 285.823);
+
+  --color-primary: var(--color-blue-500);
+  --color-primary-hover: var(--color-blue-700);
+  --color-primary-fade: var(--color-blue-300);
+  --color-primary-contrast: var(--color-white);
+
+  --color-danger: var(--color-red-500);
+  --color-danger-hover: var(--color-red-600);
+  --color-danger-fade: var(--color-red-300);
+  --color-danger-contrast: var(--color-white);
+
+  --color-secondary: var(--color-yellow-500);
+  --color-secondary-hover: var(--color-yellow-600);
+  --color-secondary-fade: var(--color-yellow-300);
+  --color-secondary-contrast: var(--color-white);
+
+  --color-text: light-dark(var(--color-gray-800), var(--color-gray-100));
+  --color-text--sub: light-dark(var(--color-gray-600), var(--color-gray-200));
+  --color-border: light-dark(var(--color-gray-300), var(--color-gray-600));
+  --color-backdrup: light-dark(hsl(0, 0%, 0%, 50%), hsl(0, 0%, 0%, 70%));
+
+  --color-surface--1: light-dark(var(--color-gray-200), var(--color-zinc-900));
+  --color-surface--2: light-dark(var(--color-gray-100), var(--color-zinc-800));
+  --color-surface--3: light-dark(var(--color-white), var(--color-zinc-600));
+
+  &[data-theme="dark"] {
+    color-scheme: dark;
+  }
+}

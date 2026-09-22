@@ -1,0 +1,20 @@
+.form-modal {
+  display: grid;
+
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+
+  .child {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-block-start: 2rem;
+    inline-size: 100%;
+  }
+}

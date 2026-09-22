@@ -1,0 +1,10 @@
+
+@font-face {
+    font-family:"danaMed" ;
+    src: url("./../assets/fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family:"morabbaMed" ;
+    src: url("./../assets/fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+}
+

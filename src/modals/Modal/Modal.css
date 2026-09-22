@@ -1,0 +1,24 @@
+.modal {
+  inline-size: min(40rem, 100%);
+  margin: auto;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  .content {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      color: var(--color-text);
+      border-block-end: 1px solid var(--color-border);
+      margin-block-end: 1rem;
+    }
+  }
+
+  &::backdrop {
+    background-color: var(--color-backdrup);
+    backdrop-filter: blur(3px);
+  }
+}

@@ -1,0 +1,15 @@
+.load {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  /* background-color: red; */
+  border-radius: 999rem;
+  border: 3px solid var(--color-primary-fade);
+  border-block-start: 5px solid var(--color-primary-hover);
+  animation: loading 500ms infinite linear;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,74 @@
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  corner-shape: round;
+
+  padding: 0.3rem 0.5rem;
+  position: relative;
+}
+
+.input-box input {
+  min-inline-size: 0;
+  padding: 0.3rem 1.2rem;
+  background-color: inherit;
+  outline: none;
+  border: none;
+
+  flex: 1 1 0;
+
+  font-family: "danaMed";
+  color: var(--color-text);
+
+  block-size: 100%;
+  font-size: 1rem;
+}
+
+.input-box input::placeholder {
+  color: var(--color-text--sub);
+  font-size: var(--font-size-300);
+}
+
+.input-box .lableText {
+  position: absolute;
+  font-size: var(--font-size-300);
+  top: 50%;
+  transform: translateY(-60%);
+  right: 8%;
+
+  user-select: none;
+  pointer-events: none;
+
+  transition: all 0.3s ease-in-out;
+
+  padding-inline: 0.5rem;
+  color: var(--color-text);
+}
+
+/* وقتی input فوکوس شده */
+.input-box:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+/* وقتی فوکوس شده یا مقدار دارد */
+.input-box:focus-within .lableText,
+.input-box input:not(:placeholder-shown) ~ .lableText {
+  top: -35%;
+  right: -1%;
+  transform: translateY(0%) scale(0.8);
+  z-index: -1;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  /* opacity: 0.5; */
+  /* backdrop-filter: blur(20px); */
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-size: var(--font-size-200);
+}
+
+.errorText {
+  color: var(--color-danger);
+  font-size: var(--font-size-200);
+}

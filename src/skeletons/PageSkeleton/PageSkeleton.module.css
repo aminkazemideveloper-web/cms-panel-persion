@@ -1,0 +1,32 @@
+.page-skeleton {
+  margin-block-start: 3rem;
+  > main {
+    display: grid;
+    grid-template-rows: 1fr;
+    .sidebar {
+      display: none;
+    }
+    .content {
+      display: grid;
+      gap: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page-skeleton {
+    display: grid;
+    gap: 2rem;
+    min-block-size: 100vh;
+    min-block-size: 100dvh;
+    margin-block-start: 5rem;
+    > main {
+      display: grid;
+      grid-template-rows: 1fr;
+      gap: 2rem;
+      .sidebar {
+        display: flex;
+      }
+    }
+  }
+}
