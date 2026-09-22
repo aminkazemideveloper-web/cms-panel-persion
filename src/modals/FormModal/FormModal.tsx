@@ -1,12 +1,18 @@
-import { type ComponentProps } from "react";
+import {
+  
+  type ComponentPropsWithoutRef,
+  type RefObject,
+} from "react";
 import Modal from "../Modal/Modal";
 import styles from "./FormModal.module.css";
 import clsx from "clsx";
 import Button from "../../Components/Button/Button";
-type Form = ComponentProps<"form">;
+
+type Form = ComponentPropsWithoutRef<"form">;
+
 type ModalForm = {
-  heading: ComponentProps<typeof Modal>["heading"];
-  ref: ComponentProps<typeof Modal>["ref"];
+  heading: string;
+  ref: RefObject<HTMLDialogElement | null>;
 };
 
 type Props = Form &
@@ -23,6 +29,8 @@ function FormModal({
   className,
   ...rest
 }: Props) {
+
+  
   const handleCloseModal = () => {
     ref.current?.close();
   };

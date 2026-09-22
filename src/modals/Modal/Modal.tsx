@@ -2,14 +2,14 @@ import "./Modal.css";
 import clsx from "clsx";
 
 import {
-  type ComponentProps,
+  type ComponentPropsWithoutRef,
   type MouseEvent,
   type ReactNode,
   type RefObject,
 } from "react";
 import { BiWindowClose } from "react-icons/bi";
 
-type Props = ComponentProps<"dialog"> & {
+type Props = ComponentPropsWithoutRef<"dialog"> & {
   heading: string;
   ref: RefObject<HTMLDialogElement | null>;
 };

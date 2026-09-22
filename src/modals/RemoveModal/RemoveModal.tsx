@@ -1,11 +1,11 @@
-import { type ComponentProps } from "react";
+import { type ComponentProps, type ComponentPropsWithoutRef } from "react";
 import Modal from "../Modal/Modal";
 
 import styles from "./RemoveModal.module.css";
 import clsx from "clsx";
 import Button from "../../Components/Button/Button";
 
-type Props = ComponentProps<"div"> & {
+type Props = ComponentPropsWithoutRef<"div"> & {
   heading: ComponentProps<typeof Modal>["heading"];
   ref: ComponentProps<typeof Modal>["ref"];
   title: string;
