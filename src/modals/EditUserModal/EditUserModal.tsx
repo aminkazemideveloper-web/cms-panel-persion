@@ -1,13 +1,13 @@
-import styles from "./EditUserModal.module.css";
+
 import FormModal from "../FormModal/FormModal";
 import Inputbox from "../../Components/Inputbox/Inputbox";
-import { type ComponentProps, type RefObject } from "react";
+import { type ComponentProps } from "react";
 import type { UserType } from "../../types/user-type";
 import { useForm } from "react-hook-form";
 import { UserSchema } from "../../vlidator/user-validator";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type z from "zod";
-import useEditUser from "../../servises/hooks/users/useEditUser";
+import useEditUser from "../../services/hooks/users/useEditUser";
 import { toast } from "react-toastify";
 
 type Props = Pick<ComponentProps<typeof FormModal>, "ref"> & {
@@ -20,7 +20,7 @@ function EditUserModal({ ref, defaultValues }: Props) {
   const {
     handleSubmit,
 
-    formState: { errors },
+    
     register,
   } = useForm<Values>({ defaultValues, resolver: zodResolver(UserSchema) });
 
@@ -37,6 +37,7 @@ function EditUserModal({ ref, defaultValues }: Props) {
 
   return (
     <FormModal
+    
       onSubmit={handleSubmit(handleSubmitForm)}
       ref={ref}
       heading="ویرایش اطلاعات"

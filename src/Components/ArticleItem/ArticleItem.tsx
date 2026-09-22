@@ -3,7 +3,7 @@ import "./ArticleItem.css";
 import { HiOutlineRectangleGroup } from "react-icons/hi2";
 import { MdManageAccounts } from "react-icons/md";
 import type { ArticleType } from "../../types/article-type";
-import { useRemoveArticle } from "../../servises/hooks/articles/useRemoveArticle";
+import { useRemoveArticle } from "../../services/hooks/articles/useRemoveArticle";
 import { useRef } from "react";
 import RemoveModal from "../../modals/RemoveModal/RemoveModal";
 import { toast } from "react-toastify";

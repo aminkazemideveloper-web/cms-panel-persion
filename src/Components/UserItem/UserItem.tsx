@@ -2,7 +2,7 @@ import Button from "../Button/Button";
 import "./UserItem.css";
 
 import type { UserType } from "../../types/user-type";
-import { useRemoveUser } from "../../servises/hooks/users/useRemoveUser";
+import { useRemoveUser } from "../../services/hooks/users/useRemoveUser";
 
 import { useRef } from "react";
 import RemoveModal from "../../modals/RemoveModal/RemoveModal";

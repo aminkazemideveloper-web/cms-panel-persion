@@ -1,10 +1,10 @@
 import type { ComponentProps } from "react";
 import FormModal from "../FormModal/FormModal";
 import { CourseSchema } from "../../vlidator/course-schemas";
-import type z from "zod";
+import {z} from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useCreateCourse } from "../../servises/hooks/courses/useCreateCourse";
+import { useCreateCourse } from "../../services/hooks/courses/useCreateCourse";
 import { toast } from "react-toastify";
 import Inputbox from "../../Components/Inputbox/Inputbox";
 
@@ -26,16 +26,15 @@ function CreateCourseModal({ ref }: Props) {
 
   const handleCreateSubmitForm = (values: Values) => {
     createMutation.mutate(values, {
-      onSuccess: (data) => {
-        console.log("data success", data);
+      onSuccess: () => {
+        
 
         toast.success("دوره جدید با موفقیت ثبت  شد");
         ref?.current?.close();
         reset();
       },
-      onError: (error) => {
+      onError: () => {
         toast.error("مشکلی پیش آمده");
-        console.log("error in create course", error);
       },
     });
   };

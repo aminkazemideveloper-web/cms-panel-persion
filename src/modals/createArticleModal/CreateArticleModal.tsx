@@ -5,7 +5,7 @@ import { ArticleSchemas } from "../../vlidator/article-schemas";
 import type { ComponentProps } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import useCreateArticle from "../../servises/hooks/articles/useCreateArticle";
+import useCreateArticle from "../../services/hooks/articles/useCreateArticle";
 import { toast } from "react-toastify";
 
 type Props = Pick<ComponentProps<typeof FormModal>, "ref">;
@@ -31,9 +31,9 @@ function CreateArticleModal({ ref }: Props) {
         ref?.current?.close();
         reset();
       },
-      onError: (error) => {
+      onError: () => {
         toast.error("مشکلی پیش آمده");
-        console.log("error in create course", error);
+        
       },
     });
   };

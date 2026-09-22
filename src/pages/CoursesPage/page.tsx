@@ -1,6 +1,6 @@
 import useTitle from "../../hooks/useTitle";
 import Courses from "../../Components/Courses/Courses";
-import { useGetAllCourses } from "../../servises/hooks/courses/useGetAllCourses";
+import { useGetAllCourses } from "../../services/hooks/courses/useGetAllCourses";
 
 import "./Courses.css";
 import UsersSkeleton from "../../skeletons/UsersSkeleton/UsersSkeleton";

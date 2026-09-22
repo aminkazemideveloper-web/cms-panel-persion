@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import React from "react";
+
 import { editUserRequest } from "../../api/request/users/edit-user";
 import type { UserType } from "../../../types/user-type";
 

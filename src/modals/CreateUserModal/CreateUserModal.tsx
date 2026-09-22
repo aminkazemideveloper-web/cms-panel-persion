@@ -4,7 +4,7 @@ import FormModal from "../FormModal/FormModal";
 import { z } from "zod";
 import { UserSchema } from "../../vlidator/user-validator";
 import { zodResolver } from "@hookform/resolvers/zod";
-import useCreateUser from "../../servises/hooks/users/useCreateUser";
+import useCreateUser from "../../services/hooks/users/useCreateUser";
 import { toast } from "react-toastify";
 import type { ComponentProps } from "react";
 import {
@@ -40,9 +40,9 @@ function CreateUserModal({ ref }: Props) {
         ref?.current?.close();
         reset();
       },
-      onError: (error) => {
+      onError: () => {
         toast.error("مشکلی پیش آمده");
-        console.log("CREATE ERROR:", error);
+        
       },
     });
   };

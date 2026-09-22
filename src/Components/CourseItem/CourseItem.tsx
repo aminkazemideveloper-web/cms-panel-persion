@@ -7,7 +7,7 @@ import Badge from "../Badge/Badge";
 import type { CourseType } from "../../types/course-type";
 import RemoveModal from "../../modals/RemoveModal/RemoveModal";
 import { useRef } from "react";
-import { useRemoveCourse } from "../../servises/hooks/courses/useRemoveCourse";
+import { useRemoveCourse } from "../../services/hooks/courses/useRemoveCourse";
 import { toast } from "react-toastify";
 
 type Props = {
@@ -26,14 +26,11 @@ function CourseItem({ course }: Props) {
 
   const handleRemoveCourse = () => {
     removeCourseMutation.mutate(_id, {
-      onSuccess: (data) => {
-        console.log("data success", data);
-
+      onSuccess: () => {
         toast.success("با موفقیت حذف شد");
         showRemoveModalRef.current?.close();
       },
-      onError: (error) => {
-        console.log("remove error", error);
+      onError: () => {
         toast.error("مشکلی پیش آمده");
         showRemoveModalRef.current?.close();
       },

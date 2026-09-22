@@ -2,7 +2,7 @@ import "./Users.css";
 
 import useTitle from "../../hooks/useTitle";
 
-import { useGetAllUsers } from "../../servises/hooks/users/useGetAllUsers";
+import { useGetAllUsers } from "../../services/hooks/users/useGetAllUsers";
 
 import Users from "../../Components/Users/Users";
 

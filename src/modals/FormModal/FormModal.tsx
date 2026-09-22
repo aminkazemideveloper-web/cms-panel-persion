@@ -11,7 +11,7 @@ type ModalForm = {
 
 type Props = Form &
   ModalForm & {
-    disabled: boolean;
+    disabled?: boolean;
   };
 
 function FormModal({
