@@ -30,20 +30,19 @@ function Courses({ courses }: Props) {
       </div>
       <div className="courses__btns">
         <Button
-          color="blue"
-          variant="solid"
-          size="md"
+          color="primary"
+          varient="solid"
           type="button"
-          onclick={handleShowCreateCourseButtonClick}
+          onClick={handleShowCreateCourseButtonClick}
         >
           <BiPlusMedical />
           افزودن دوره ی جدید
         </Button>
-        <Button color="red" variant="solid" size="md">
+        <Button color="danger" varient="solid">
           <BiSolidOffer />
           اعمال تخفیف همه دوره ها
         </Button>
-        <Button color="brown" variant="solid" size="md">
+        <Button color="secondary" varient="solid">
           <BiCategory />
           افزودن دسته بندی
         </Button>

@@ -45,7 +45,7 @@ function Sidebar() {
           />
         </div>
         <div className="sidebar_btn">
-          <Button color="blue">
+          <Button color="primary">
             <FaPencil />
             تغییر اطلاعات
           </Button>

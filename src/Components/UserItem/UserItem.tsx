@@ -53,20 +53,19 @@ function UserItem({ user }: Props) {
         </div>
       </div>
       <div className="userItem__left">
-        <Button color="gray" size="md" variant="solid">
+        <Button color="secondary" varient="solid">
           <BiMessage />
           پیام ها
         </Button>
         <Button
-          color="brown"
-          size="md"
-          variant="outline"
-          onclick={handleshowEditUserModalClick}
+          color="primary"
+          varient="outlined"
+          onClick={handleshowEditUserModalClick}
         >
           <BiInfoCircle />
           اطلاعات
         </Button>
-        <Button color="red" size="md" variant="solid" onclick={removeHandler}>
+        <Button color="danger" varient="solid" onClick={removeHandler}>
           <BiTrash />
           حذف
         </Button>

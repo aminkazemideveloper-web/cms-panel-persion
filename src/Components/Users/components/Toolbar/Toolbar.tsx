@@ -12,7 +12,7 @@ function Toolbar({ onShowModal }: Props) {
     <div className={styles.toolbar}>
       <SearchBox />
 
-      <Button onclick={onShowModal} color="blue" size="md" variant="solid">
+      <Button onClick={onShowModal} color="primary" varient="solid">
         <BiPlus className={styles.icon} />
         <span className={styles.text}>کاربر جدید</span>
       </Button>

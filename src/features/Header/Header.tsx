@@ -30,7 +30,7 @@ function Header() {
             <ThemeButton />
           </div>
           <div className="icon__notification">
-            <Button color="gray" variant="solid" size="icon">
+            <Button color="secondary" varient="solid">
               <BiSolidBellRing className="notif_icon" />
             </Button>
           </div>

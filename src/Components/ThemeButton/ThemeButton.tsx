@@ -26,12 +26,7 @@ function ThemeButton() {
   }, [theme]);
 
   return (
-    <Button
-      color="brown"
-      variant="solid"
-      size="icon"
-      onclick={handleToggleTheme}
-    >
+    <Button color="primary" varient="solid" onClick={handleToggleTheme}>
       {theme === "light" ? (
         <LuMoon className="sun_icon" />
       ) : (

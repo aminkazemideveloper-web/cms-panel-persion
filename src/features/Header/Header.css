@@ -101,6 +101,10 @@
   transform: rotate(180deg) scale(1.1);
   color: var(--color-danger);
 }
+.signIn_link:hover span {
+  transform: scale(1.1);
+  color: var(--color-danger);
+}
 
 /* mobile size */
 @media screen and (min-width: 576px) {

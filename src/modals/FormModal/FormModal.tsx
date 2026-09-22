@@ -36,14 +36,14 @@ function FormModal({
       >
         <div className={styles.child}>{children}</div>
         <div className={styles.actions}>
-          <Button color="blue" type="submit" disabled={disabled}>
+          <Button color="primary" type="submit" disabled={disabled}>
             ذخیره
           </Button>
           <Button
             type="button"
-            variant="ghost"
-            onclick={handleCloseModal}
-            color="brown"
+            varient="outlined"
+            onClick={handleCloseModal}
+            color="secondary"
           >
             انصراف
           </Button>

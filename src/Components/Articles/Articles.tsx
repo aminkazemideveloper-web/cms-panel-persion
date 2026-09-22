@@ -29,10 +29,9 @@ function Articles({ articles }: Props) {
       </div>
       <div className={styles["articles__btn"]}>
         <Button
-          color="blue"
-          variant="solid"
-          size="lg"
-          onclick={handleShowCreateCourseModal}
+          color="primary"
+          varient="solid"
+          onClick={handleShowCreateCourseModal}
         >
           <BiPlus />
           افزودن مقاله ی جدید

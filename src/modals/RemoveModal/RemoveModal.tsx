@@ -31,13 +31,18 @@ function RemoveModal({
 
         <div className={styles.actions}>
           <Button
-            color="brown"
-            variant="ghost"
-            onclick={handleCancelClickButton}
+            color="secondary"
+            varient="outlined"
+            onClick={handleCancelClickButton}
           >
             انصراف
           </Button>
-          <Button color="blue" variant="solid" type="button" onclick={onRemove}>
+          <Button
+            color="primary"
+            varient="solid"
+            type="button"
+            onClick={onRemove}
+          >
             تایید
           </Button>
         </div>

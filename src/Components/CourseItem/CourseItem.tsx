@@ -87,14 +87,13 @@ function CourseItem({ course }: Props) {
           </div>
           <div className="courseItem__left--bottom--left">
             <Button
-              color="red"
-              variant="solid"
-              size="sm"
-              onclick={handleRemoveModalShowButtonClick}
+              color="danger"
+              varient="solid"
+              onClick={handleRemoveModalShowButtonClick}
             >
               حذف
             </Button>
-            <Button color="blue" size="sm" variant="solid">
+            <Button color="primary" varient="solid">
               ویرایش
             </Button>
           </div>

@@ -68,16 +68,15 @@ function ArticleItem({ article }: Props) {
           </div>
           <div className="articleItem__left--bottom--left">
             <Button
-              color="red"
-              variant="solid"
-              size="sm"
+              color="danger"
+              varient="solid"
               type="button"
-              onclick={handleShowRemoveModal}
+              onClick={handleShowRemoveModal}
             >
               <BiTrash />
               حذف
             </Button>
-            <Button color="blue" size="sm" variant="solid">
+            <Button color="primary" varient="solid">
               <BiSolidEdit />
               ویرایش
             </Button>
