@@ -327,17 +327,7 @@ Examples include:
 
 ---
 
-## 🔐 Environment Variables
 
-If the project requires environment variables, create a `.env` file in the project root:
-
-```env
-VITE_API_URL=your_api_url
-```
-
-Do not commit sensitive information such as API keys, tokens, or passwords to GitHub.
-
----
 
 ## 👨‍💻 Author
 
