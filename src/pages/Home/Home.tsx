@@ -19,28 +19,27 @@ function Home() {
   const { data: articles } = useGetAllArticles();
   const { data: courses } = useGetAllCourses();
 
-  
   const dashboardDatas = [
     {
       id: 1,
       title: "تعداد کاربران",
       icon: <BiSolidUserAccount />,
       link: "/users",
-      count: users.length ?? 0,
+      count: users?.length ?? 0,
     },
     {
       id: 2,
       title: "تعداد مقالات",
       icon: <BiBookContent />,
       link: "/articles",
-      count: articles.length ?? 0,
+      count: articles?.length ?? 0,
     },
     {
       id: 3,
       title: "تعداد دوره ها",
       icon: <BiCodeCurly />,
       link: "/courses",
-      count: courses.length ?? 0,
+      count: courses?.length ?? 0,
     },
   ];
   return (
