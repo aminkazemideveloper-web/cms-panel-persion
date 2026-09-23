@@ -1,13 +1,13 @@
-import Container from "../../Components/Container/Container";
+import Container from "../../components/Container/Container";
 import "./Header.css";
-import Button from "../../Components/Button/Button";
+import Button from "../../components/Button/Button";
 
 import { RxExit } from "react-icons/rx";
 
-import ThemeButton from "../../Components/ThemeButton/ThemeButton";
+import ThemeButton from "../../components/ThemeButton/ThemeButton";
 import { BiSolidBellRing } from "react-icons/bi";
 import { Link } from "react-router";
-import TiTleSectionItem from "../../Components/TiTleSectionItem/TiTleSectionItem";
+import TiTleSectionItem from "../../components/TiTleSectionItem/TiTleSectionItem";
 
 function Header() {
   return (

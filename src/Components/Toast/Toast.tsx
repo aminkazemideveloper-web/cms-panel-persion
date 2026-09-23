@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Slide, ToastContainer } from "react-toastify";
-import type { RootState } from "../../Redux/store";
+import type { RootState } from "../../redux/store";
 
 function Toast() {
   const theme = useSelector((state: RootState) => state.theme.theme);

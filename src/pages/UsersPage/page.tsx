@@ -4,13 +4,13 @@ import useTitle from "../../hooks/useTitle";
 
 import { useGetAllUsers } from "../../services/hooks/users/useGetAllUsers";
 
-import Users from "../../Components/Users/Users";
+import Users from "../../components/Users/Users";
 
 import UsersSkeleton from "../../skeletons/UsersSkeleton/UsersSkeleton";
 import Load from "../../Components/Load/Load";
 
 function UsersPage() {
-  const { data: users, isPending, isFetching, isFetched } = useGetAllUsers();
+  const { data: users, isPending, isFetching } = useGetAllUsers();
   useTitle("کاربران");
 
   if (isPending) {
@@ -20,7 +20,7 @@ function UsersPage() {
   return (
     <>
       {isFetching && <Load />}
-      <Users users={users} loading={isFetched} />
+      <Users users={users} loading={isFetching} />
     </>
   );
 }

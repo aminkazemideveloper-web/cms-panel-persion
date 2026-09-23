@@ -1,5 +1,5 @@
 import type { CourseType } from "../../../../types/course-type";
-import { apiRequest } from "../../confige/instance";
+import { apiRequest } from "../../config/instance";
 
 type CreateCoursePayload = Omit<CourseType, "_id">;
 

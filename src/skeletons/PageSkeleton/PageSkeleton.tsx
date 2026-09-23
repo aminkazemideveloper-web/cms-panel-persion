@@ -1,4 +1,4 @@
-import Container from "../../Components/Container/Container";
+import Container from "../../components/Container/Container";
 import HeaderSectionSkeleton from "../HeaderSectionSkeleton/HeaderSectionSkeleton";
 import HeaderSkeleton from "../HeaderSkeleton/HeaderSkeleton";
 import SidebarSkeleton from "../SidebarSkeleton/SidebarSkeleton";
@@ -11,7 +11,9 @@ function PageSkeleton() {
       <div className={styles["page-skeleton"]}>
         <HeaderSkeleton />
         <main>
-          <div className={styles.sidebar}><SidebarSkeleton /></div>
+          <div className={styles.sidebar}>
+            <SidebarSkeleton />
+          </div>
           <div className={styles.content}>
             <HeaderSectionSkeleton />
             <UsersSkeleton />

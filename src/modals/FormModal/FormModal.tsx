@@ -1,12 +1,8 @@
-import {
-  
-  type ComponentPropsWithoutRef,
-  type RefObject,
-} from "react";
+import { type ComponentPropsWithoutRef, type RefObject } from "react";
 import Modal from "../Modal/Modal";
 import styles from "./FormModal.module.css";
 import clsx from "clsx";
-import Button from "../../Components/Button/Button";
+import Button from "../../components/Button/Button";
 
 type Form = ComponentPropsWithoutRef<"form">;
 
@@ -29,8 +25,6 @@ function FormModal({
   className,
   ...rest
 }: Props) {
-
-  
   const handleCloseModal = () => {
     ref.current?.close();
   };

@@ -1,6 +1,6 @@
 import { BiBookContent, BiCodeCurly, BiSolidUserAccount } from "react-icons/bi";
 import styles from "./Home.module.css";
-import DashboardItem from "../../Components/DashboardItem/DashboardItem";
+import DashboardItem from "../../components/DashboardItem/DashboardItem";
 import type { ReactNode } from "react";
 import { useGetAllUsers } from "../../services/hooks/users/useGetAllUsers";
 import useGetAllArticles from "../../services/hooks/articles/useGetAllArticles";
@@ -55,7 +55,7 @@ function Home() {
 
       <div className={styles.contant}>
         {dashboardDatas.map((item: DashboardItemType) => (
-          <DashboardItem key={item.id} item={item}  />
+          <DashboardItem key={item.id} item={item} />
         ))}
       </div>
     </div>

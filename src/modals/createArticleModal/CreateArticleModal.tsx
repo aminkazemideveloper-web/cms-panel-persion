@@ -1,7 +1,7 @@
 import type z from "zod";
-import Inputbox from "../../Components/Inputbox/Inputbox";
+import Inputbox from "../../components/Inputbox/Inputbox";
 import FormModal from "../FormModal/FormModal";
-import { ArticleSchemas } from "../../vlidator/article-schemas";
+import { ArticleSchemas } from "../../vlidators/article-schemas";
 import type { ComponentProps } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,7 +12,6 @@ type Props = Pick<ComponentProps<typeof FormModal>, "ref">;
 type Values = z.infer<typeof ArticleSchemas>;
 
 function CreateArticleModal({ ref }: Props) {
-
   const {
     handleSubmit,
     reset,
@@ -33,7 +32,6 @@ function CreateArticleModal({ ref }: Props) {
       },
       onError: () => {
         toast.error("مشکلی پیش آمده");
-        
       },
     });
   };

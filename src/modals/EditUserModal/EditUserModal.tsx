@@ -1,10 +1,9 @@
-
 import FormModal from "../FormModal/FormModal";
-import Inputbox from "../../Components/Inputbox/Inputbox";
+import Inputbox from "../../components/Inputbox/Inputbox";
 import { type ComponentProps } from "react";
 import type { UserType } from "../../types/user-type";
 import { useForm } from "react-hook-form";
-import { UserSchema } from "../../vlidator/user-validator";
+import { UserSchema } from "../../vlidators/user-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type z from "zod";
 import useEditUser from "../../services/hooks/users/useEditUser";
@@ -20,7 +19,6 @@ function EditUserModal({ ref, defaultValues }: Props) {
   const {
     handleSubmit,
 
-    
     register,
   } = useForm<Values>({ defaultValues, resolver: zodResolver(UserSchema) });
 
@@ -37,7 +35,6 @@ function EditUserModal({ ref, defaultValues }: Props) {
 
   return (
     <FormModal
-    
       onSubmit={handleSubmit(handleSubmitForm)}
       ref={ref}
       heading="ویرایش اطلاعات"

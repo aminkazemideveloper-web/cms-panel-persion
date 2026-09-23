@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import styles from "./HeaderSection.module.css";
 import { FaRegUser } from "react-icons/fa6";
-
+import { AiOutlineFileText } from "react-icons/ai";
 import { MdOutlineArticle } from "react-icons/md";
 import { FaDiscourse, FaHome } from "react-icons/fa";
 import clsx from "clsx";
@@ -37,7 +37,7 @@ function HeaderSection() {
       id: 4,
       label: "دوره ها",
       link: "/courses",
-      icon: <FaDiscourse />,
+      icon: <AiOutlineFileText />,
       color: "blue",
     },
   ];

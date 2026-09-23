@@ -1,12 +1,12 @@
 import type { ComponentProps } from "react";
 import FormModal from "../FormModal/FormModal";
-import { CourseSchema } from "../../vlidator/course-schemas";
-import {z} from "zod";
+import { CourseSchema } from "../../vlidators/course-schemas";
+import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCreateCourse } from "../../services/hooks/courses/useCreateCourse";
 import { toast } from "react-toastify";
-import Inputbox from "../../Components/Inputbox/Inputbox";
+import Inputbox from "../../components/Inputbox/Inputbox";
 
 type Values = z.infer<typeof CourseSchema>;
 
@@ -27,8 +27,6 @@ function CreateCourseModal({ ref }: Props) {
   const handleCreateSubmitForm = (values: Values) => {
     createMutation.mutate(values, {
       onSuccess: () => {
-        
-
         toast.success("دوره جدید با موفقیت ثبت  شد");
         ref?.current?.close();
         reset();
@@ -42,7 +40,7 @@ function CreateCourseModal({ ref }: Props) {
   return (
     <FormModal
       disabled={createMutation.isPending}
-      heading="ایجاد کاربر جدید"
+      heading="ایجاد دوره ی جدید"
       ref={ref}
       onSubmit={handleSubmit(handleCreateSubmitForm)}
     >

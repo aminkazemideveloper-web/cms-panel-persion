@@ -1,8 +1,9 @@
 import { IoSearch } from "react-icons/io5";
 import styles from "./SearchBox.module.css";
 import { useEffect, useState, type ChangeEvent } from "react";
-import useDebounce from "../../lib/hooks/useDebounce";
+
 import Load from "../Load/Load";
+import useDebounce from "../../hooks/useDebounce";
 
 type Props = {
   onSearch: (value: string) => void;

@@ -1,6 +1,7 @@
-import { apiRequest } from "../../confige/instance";
+import type { UserType } from "../../../../types/user-type";
+import { apiRequest } from "../../config/instance";
 
-export const getAllUsers = async () => {
-  const res = await apiRequest.get("/users");
+export const getAllUsers = async (): Promise<UserType[]> => {
+  const res = await apiRequest.get<UserType[]>("/users");
   return res.data;
 };

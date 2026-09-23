@@ -1,8 +1,8 @@
 import { LuMoon, LuSun } from "react-icons/lu";
 import Button from "../Button/Button";
 import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../../Redux/store";
-import { setTheme, toggleTheme } from "../../Redux/slice/themeSlice";
+import type { RootState } from "../../redux/store";
+import { setTheme, toggleTheme } from "../../redux/slice/themeSlice";
 import { useEffect } from "react";
 
 function ThemeButton() {

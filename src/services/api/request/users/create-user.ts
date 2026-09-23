@@ -1,5 +1,5 @@
 import type { UserType } from "../../../../types/user-type";
-import { apiRequest } from "../../confige/instance";
+import { apiRequest } from "../../config/instance";
 
 type CreateUserPayload = Omit<UserType, "_id">;
 

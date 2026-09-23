@@ -2,8 +2,8 @@ import { Outlet } from "react-router";
 import styles from "./DashboardLayout.module.css";
 import Container from "../../Container/Container";
 
-import Header from "../../../features/Header/Header";
-import Sidebar from "../../../features/Sidebar/Sidebar";
+import Header from "../../../ui/Header/Header";
+import Sidebar from "../../../ui/Sidebar/Sidebar";
 import HeaderSection from "../Common/HeaderSection/HeaderSection";
 
 function DashboardLayout() {

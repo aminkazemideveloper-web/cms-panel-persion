@@ -3,9 +3,9 @@ import "./Articles.css";
 import useTitle from "../../hooks/useTitle";
 
 import useGetAllArticles from "../../services/hooks/articles/useGetAllArticles";
-import Articles from "../../Components/Articles/Articles";
+import Articles from "../../components/Articles/Articles";
 import UsersSkeleton from "../../skeletons/UsersSkeleton/UsersSkeleton";
-import Load from "../../Components/Load/Load";
+import Load from "../../components/Load/Load";
 
 function ArticlesPage() {
   const { data: articles, isPending, isFetching } = useGetAllArticles();

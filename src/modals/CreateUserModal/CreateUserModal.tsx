@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import Inputbox from "../../Components/Inputbox/Inputbox";
+import Inputbox from "../../components/Inputbox/Inputbox";
 import FormModal from "../FormModal/FormModal";
 import { z } from "zod";
-import { UserSchema } from "../../vlidator/user-validator";
+import { UserSchema } from "../../vlidators/user-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import useCreateUser from "../../services/hooks/users/useCreateUser";
 import { toast } from "react-toastify";
@@ -42,7 +42,6 @@ function CreateUserModal({ ref }: Props) {
       },
       onError: () => {
         toast.error("مشکلی پیش آمده");
-        
       },
     });
   };
@@ -52,9 +51,7 @@ function CreateUserModal({ ref }: Props) {
       disabled={createMutation.isPending}
       heading="ایجاد کاربر جدید"
       ref={ref}
-      onSubmit={handleSubmit(handleCreateSubmitForm, (errors) => {
-        console.log("VALIDATION ERRORS:", errors);
-      })}
+      onSubmit={handleSubmit(handleCreateSubmitForm)}
     >
       <Inputbox
         type="text"

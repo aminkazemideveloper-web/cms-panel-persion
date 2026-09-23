@@ -4,7 +4,7 @@ import ArticleItem from "../ArticleItem/ArticleItem";
 import Button from "../Button/Button";
 import { useRef } from "react";
 import styles from "./Articles.module.css";
-import CreateArticleModal from "../../modals/createArticleModal/CreateArticleModal";
+import CreateArticleModal from "../../modals/CreateArticleModal/CreateArticleModal";
 type Props = {
   articles: ArticleType[];
 };

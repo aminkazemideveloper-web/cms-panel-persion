@@ -8,7 +8,7 @@ import CoursesPage from "./pages/CoursesPage/page";
 import Home from "./pages/Home/Home";
 
 const DashboardLayout = lazy(
-  () => import("./Components/Layouts/DashboardLayout/DashboardLayout"),
+  () => import("./components/Layouts/DashboardLayout/DashboardLayout"),
 );
 
 const router = createBrowserRouter([

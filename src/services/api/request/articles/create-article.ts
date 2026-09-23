@@ -1,5 +1,5 @@
 import type { ArticleType } from "../../../../types/article-type";
-import { apiRequest } from "../../confige/instance";
+import { apiRequest } from "../../config/instance";
 
 type newArticlePayload = Omit<ArticleType, "_id">;
 

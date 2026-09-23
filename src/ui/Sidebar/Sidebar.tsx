@@ -2,7 +2,7 @@ import Detailes from "./components/Detailes/Detailes";
 import Profile from "./components/Profile/Profile";
 import "./Sidebar.css";
 
-import Button from "../../Components/Button/Button";
+import Button from "../../components/Button/Button";
 import { FaPencil } from "react-icons/fa6";
 import { BiSolidUserAccount, BiUser, BiUserPlus } from "react-icons/bi";
 

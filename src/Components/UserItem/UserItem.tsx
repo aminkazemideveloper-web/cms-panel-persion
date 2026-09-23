@@ -63,7 +63,7 @@ function UserItem({ user }: Props) {
           onClick={handleshowEditUserModalClick}
         >
           <BiInfoCircle />
-          اطلاعات
+          ویرایش
         </Button>
         <Button color="danger" varient="solid" onClick={removeHandler}>
           <BiTrash />

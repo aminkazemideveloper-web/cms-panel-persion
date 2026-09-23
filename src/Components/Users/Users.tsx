@@ -19,9 +19,8 @@ function Users({ users, loading }: Props) {
     showCreateModalRef.current?.showModal();
   };
 
-  const filteredUsers = users.filter((user: UserType) => {
-    const searchValue = search.trim().toLowerCase();
-
+  const searchValue = search.trim().toLowerCase();
+  const filteredUsers = users.filter((user) => {
     if (!searchValue) {
       return true;
     }
@@ -42,12 +41,16 @@ function Users({ users, loading }: Props) {
         loading={loading}
       />
 
-      {filteredUsers.map((user: UserType) => (
+      {filteredUsers.map((user) => (
         <UserItem user={user} key={user._id} />
       ))}
 
       {filteredUsers.length === 0 && (
         <div className="users__wrapper-warning">هیچ کاربری فعلا عضو نیست</div>
+      )}
+
+      {users.length > 0 && filteredUsers.length === 0 && (
+        <div>جستجو برای پیدا کردن کاربر مورد نظر به نتیجه ای نرسید</div>
       )}
 
       <CreateUserModal ref={showCreateModalRef} />
