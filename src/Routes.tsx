@@ -5,6 +5,7 @@ import PageSkeleton from "./skeletons/PageSkeleton/PageSkeleton";
 import UsersPage from "./pages/UsersPage/page";
 import ArticlesPage from "./pages/ArticlesPage/page";
 import CoursesPage from "./pages/CoursesPage/page";
+import Home from "./pages/Home/Home";
 
 const DashboardLayout = lazy(
   () => import("./Components/Layouts/DashboardLayout/DashboardLayout"),
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => redirect("users"),
+        element: <Home />,
       },
       {
         path: "users",
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "course",
+        path: "courses",
         element: <CoursesPage />,
       },
     ],

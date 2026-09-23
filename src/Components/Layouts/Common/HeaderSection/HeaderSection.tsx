@@ -1,4 +1,3 @@
-
 import { NavLink } from "react-router";
 import "./HeaderSection.css";
 import { FaRegUser } from "react-icons/fa6";
@@ -11,6 +10,20 @@ function HeaderSection() {
   return (
     <div>
       <ul className="navbar">
+        <li>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              clsx("navbar_item", isActive && "item_active")
+            }
+          >
+            <span>
+              <FaRegUser />{" "}
+            </span>
+            <span>داشبورد</span>
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="/users"
@@ -41,7 +54,7 @@ function HeaderSection() {
         </li>
         <li>
           <NavLink
-            to="/course"
+            to="/courses"
             className={({ isActive }) =>
               clsx("navbar_item", isActive && "item_active")
             }

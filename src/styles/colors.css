@@ -94,6 +94,13 @@
   --color-danger-light: var(--color-red-100);
   --color-danger-contrast: var(--color-white);
 
+  --color-success: var(--color-green-500);
+  --color-success-hover: var(--color-green-600);
+  --color-success-dark: var(--color-green-900);
+  --color-success-fade: var(--color-green-300);
+  --color-success-light: var(--color-green-100);
+  --color-success-contrast: var(--color-white);
+
   --color-secondary: var(--color-yellow-500);
   --color-secondary-hover: var(--color-yellow-600);
   --color-secondary-dark: var(--color-yellow-900);
