@@ -2,7 +2,7 @@ import styles from "./DashboardItem.module.css";
 import type { DashboardItemType } from "../../pages/Home/Home";
 import { Link } from "react-router";
 import clsx from "clsx";
-import { BiArrowFromLeft, BiLeftArrow, BiSolidLeftArrow } from "react-icons/bi";
+import { BiSolidLeftArrow } from "react-icons/bi";
 
 type Props = {
   item: DashboardItemType;
