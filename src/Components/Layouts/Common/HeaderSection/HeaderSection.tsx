@@ -1,70 +1,68 @@
 import { NavLink } from "react-router";
-import "./HeaderSection.css";
+import styles from "./HeaderSection.module.css";
 import { FaRegUser } from "react-icons/fa6";
 
 import { MdOutlineArticle } from "react-icons/md";
-import { FaDiscourse } from "react-icons/fa";
+import { FaDiscourse, FaHome } from "react-icons/fa";
 import clsx from "clsx";
+import type { ReactNode } from "react";
+import type { CardColor } from "../../../../types/car-color";
+
+type Category = {
+  id: number;
+  label: string;
+  link: string;
+  icon: ReactNode;
+  color: CardColor;
+};
 
 function HeaderSection() {
+  const categories: Category[] = [
+    { id: 1, label: "خانه", link: "/", icon: <FaHome />, color: "yellow" },
+    {
+      id: 2,
+      label: "کاربران",
+      link: "/users",
+      icon: <FaRegUser />,
+      color: "red",
+    },
+    {
+      id: 3,
+      label: "مقاله",
+      link: "/articles",
+      icon: <MdOutlineArticle />,
+      color: "green",
+    },
+    {
+      id: 4,
+      label: "دوره ها",
+      link: "/courses",
+      icon: <FaDiscourse />,
+      color: "blue",
+    },
+  ];
+
   return (
     <div>
-      <ul className="navbar">
-        <li>
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              clsx("navbar_item", isActive && "item_active")
-            }
-          >
-            <span>
-              <FaRegUser />{" "}
-            </span>
-            <span>داشبورد</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/users"
-            end
-            className={({ isActive }) =>
-              clsx("navbar_item", isActive && "item_active")
-            }
-          >
-            <span>
-              <FaRegUser />{" "}
-            </span>
-            <span>کاربران</span>
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink
-            to="/articles"
-            className={({ isActive }) =>
-              clsx("navbar_item", isActive && "item_active")
-            }
-          >
-            <span>
-              <MdOutlineArticle />
-            </span>
-            <span>مقالات</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/courses"
-            className={({ isActive }) =>
-              clsx("navbar_item", isActive && "item_active")
-            }
-          >
-            <span>
-              <FaDiscourse />
-            </span>
-            <span>دوره ها</span>
-          </NavLink>
-        </li>
+      <ul className={styles.navbar}>
+        {categories.map((category: Category) => (
+          <li key={category.id}>
+            <NavLink
+              to={category.link}
+              end
+              className={({ isActive }) =>
+                clsx(
+                  styles["navbar_item"],
+                  category.color,
+                  isActive && styles["item_active"],
+                )
+              }
+            >
+              <span className={styles.icon}>{category.icon} </span>
+              <span className={styles.label}>{category.label}</span>
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </div>
   );

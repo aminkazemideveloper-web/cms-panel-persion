@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { useGetAllUsers } from "../../services/hooks/users/useGetAllUsers";
 import useGetAllArticles from "../../services/hooks/articles/useGetAllArticles";
 import { useGetAllCourses } from "../../services/hooks/courses/useGetAllCourses";
+import type { CardColor } from "../../types/car-color";
 
 export type DashboardItemType = {
   id: number;
@@ -12,6 +13,7 @@ export type DashboardItemType = {
   icon: ReactNode;
   link: string;
   count: number;
+  color: CardColor;
 };
 
 function Home() {
@@ -26,6 +28,7 @@ function Home() {
       icon: <BiSolidUserAccount />,
       link: "/users",
       count: users?.length ?? 0,
+      color: "red",
     },
     {
       id: 2,
@@ -33,6 +36,7 @@ function Home() {
       icon: <BiBookContent />,
       link: "/articles",
       count: articles?.length ?? 0,
+      color: "green",
     },
     {
       id: 3,
@@ -40,6 +44,7 @@ function Home() {
       icon: <BiCodeCurly />,
       link: "/courses",
       count: courses?.length ?? 0,
+      color: "blue",
     },
   ];
   return (
@@ -50,7 +55,7 @@ function Home() {
 
       <div className={styles.contant}>
         {dashboardDatas.map((item: DashboardItemType) => (
-          <DashboardItem key={item.id} item={item} />
+          <DashboardItem key={item.id} item={item}  />
         ))}
       </div>
     </div>

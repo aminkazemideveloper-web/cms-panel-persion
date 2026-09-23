@@ -21,3 +21,24 @@ button,
 textarea {
   font-family: inherit;
 }
+
+.red {
+  --main-color: var(--color-danger);
+  --second-color: var(--color-danger-light);
+}
+.blue {
+  --main-color: var(--color-primary);
+  --second-color: var(--color-primary-light);
+}
+.green {
+  --main-color: var(--color-success);
+  --second-color: var(--color-success-light);
+}
+.yellow {
+  --main-color: var(--color-secondary);
+  --second-color: var(--color-secondary-light);
+}
+.gray {
+  --main-color: var(--color-gray);
+  --second-color: var(--color-gray-light);
+}

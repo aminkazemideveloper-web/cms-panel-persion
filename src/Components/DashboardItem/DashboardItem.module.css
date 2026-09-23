@@ -1,5 +1,11 @@
 .dashboard-item {
-  border: 1px solid var(--color-border);
+  background: linear-gradient(
+    to bottom left,
+    var(--main-color),
+    var(--second-color) 100%,
+    transparent
+  );
+  border: 1px solid var(--main-color);
   border-radius: 0.5rem;
   corner-shape: round;
   padding: 1rem;
@@ -8,6 +14,7 @@
   transition: all 0.3s ease-in;
   &:hover {
     transform: translateY(-4px);
+    box-shadow: 0 0 5px var(--main-color);
   }
   .header {
     display: flex;
@@ -22,26 +29,37 @@
       > h3 {
         font-size: var(--font-size-300);
         font-weight: 600;
+        color: var(--second-color);
       }
       > span {
         padding: 0.3rem;
         border-radius: 999rem;
         font-size: var(--font-size-400);
-        border: 1px solid var(--color-border);
+
         display: flex;
         align-items: center;
         justify-content: center;
+        color: var(--second-color);
+        background-color: transparent;
       }
     }
     .count {
       font-size: var(--font-size-300);
       font-weight: 700;
-      color: var(--color-primary);
+      color: var(--main-color);
+      animation: track 1s infinite linear;
+      inline-size: 1.7rem;
+      block-size: 1.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999rem;
+      box-shadow: 0 0 5px var(--main-color);
     }
   }
   .footer {
     padding-block-start: 0.5rem;
-    border-block-start: 1px solid var(--color-border);
+    border-block-start: 1px solid var(--main-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,13 +67,42 @@
 
     .link {
       text-decoration: none;
-      color: var(--color-primary);
+      color: var(--main-color);
       font-size: var(--font-size-200);
       transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 1ch;
+
+      > .arrow {
+        transition: all 0.3s ease-in;
+      }
       &:hover {
-        transform: scale(1.2);
-        color: var(--color-primary-hover);
+        /* transform: scale(1.2); */
+        .arrow {
+          transform: translateX(-6px);
+        }
       }
     }
+  }
+}
+
+@keyframes track {
+  0%,
+  50%,
+  100% {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(1px);
+    background-color: var(--second-color);
+    color: var(--main-color);
+  }
+  75% {
+    transform: translateY(-1px);
+    background-color: var(--main-color);
+    color: var(--second-color);
   }
 }

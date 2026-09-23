@@ -1,7 +1,7 @@
 .home {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 3rem;
+  gap: 1rem;
   .header {
     margin-block: 1rem;
     > h2 {

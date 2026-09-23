@@ -1,6 +1,8 @@
 import styles from "./DashboardItem.module.css";
 import type { DashboardItemType } from "../../pages/Home/Home";
 import { Link } from "react-router";
+import clsx from "clsx";
+import { BiArrowFromLeft, BiLeftArrow, BiSolidLeftArrow } from "react-icons/bi";
 
 type Props = {
   item: DashboardItemType;
@@ -8,7 +10,7 @@ type Props = {
 
 function DashboardItem({ item }: Props) {
   return (
-    <div className={styles["dashboard-item"]}>
+    <div className={clsx(styles["dashboard-item"], item.color)}>
       <div className={styles.header}>
         <div className={styles.written}>
           <h3>{item.title}</h3>
@@ -19,7 +21,8 @@ function DashboardItem({ item }: Props) {
 
       <div className={styles.footer}>
         <Link className={styles.link} to={item.link}>
-          مشاهده صفحه
+          <span> مشاهده صفحه</span>
+          <BiSolidLeftArrow className={styles.arrow} />
         </Link>
       </div>
     </div>
