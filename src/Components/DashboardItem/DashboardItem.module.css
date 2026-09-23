@@ -44,16 +44,17 @@
       }
     }
     .count {
-      font-size: var(--font-size-300);
+      font-size: var(--font-size-200);
       font-weight: 700;
       color: var(--main-color);
       animation: track 1s infinite linear;
-      inline-size: 1.7rem;
-      block-size: 1.7rem;
+      inline-size: 2.5rem;
+      block-size: 2.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 999rem;
+      corner-shape: scoop;
       box-shadow: 0 0 5px var(--main-color);
     }
   }
@@ -93,15 +94,15 @@
   100% {
     background-color: var(--main-color);
     color: var(--second-color);
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
   25% {
-    transform: translateY(1px);
+    transform: translateY(1px) rotate(2deg);
     background-color: var(--second-color);
     color: var(--main-color);
   }
   75% {
-    transform: translateY(-1px);
+    transform: translateY(-1px) rotate(-2deg);
     background-color: var(--main-color);
     color: var(--second-color);
   }
