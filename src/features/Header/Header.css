@@ -65,8 +65,8 @@
   align-items: center;
   gap: 1ch;
   position: relative;
-  top: -3px;
-  padding: 0.25rem;
+  /* top: -3px; */
+  padding: 0.5rem;
   text-decoration: none;
 
   font-size: var(--font-size-300);
@@ -109,7 +109,7 @@
 /* mobile size */
 @media screen and (min-width: 576px) {
   .signIn_link {
-    top: -2px;
+    /* top: -2px; */
     padding: 0.3rem;
 
     > svg {
@@ -121,7 +121,7 @@
 @media screen and (min-width: 768px) {
   .signIn_link {
     top: 0;
-    padding: 0.4rem;
+    padding: 0.3rem;
 
     > svg {
       font-size: var(--font-size-400);

@@ -7,6 +7,7 @@ import { RxExit } from "react-icons/rx";
 import ThemeButton from "../../Components/ThemeButton/ThemeButton";
 import { BiSolidBellRing } from "react-icons/bi";
 import { Link } from "react-router";
+import TiTleSectionItem from "../../Components/TiTleSectionItem/TiTleSectionItem";
 
 function Header() {
   return (
@@ -20,10 +21,12 @@ function Header() {
               alt=""
             />
           </div>
-          <div className="text_box">
+          {/* <div className="text_box">
             <span className="header_title">امین کاظمی</span>
             <p className="header_desc">توسعه دهنده جاوا اسکریپت</p>
-          </div>
+          </div> */}
+
+          <TiTleSectionItem title="امین کاظمی" sub="توسعه دهنده وب" />
         </div>
         <div className="header_left">
           <div className="icon__sun">
