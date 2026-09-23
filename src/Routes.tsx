@@ -1,4 +1,4 @@
-import { createBrowserRouter, redirect } from "react-router";
+import { createBrowserRouter } from "react-router";
 
 import { lazy, Suspense } from "react";
 import PageSkeleton from "./skeletons/PageSkeleton/PageSkeleton";
