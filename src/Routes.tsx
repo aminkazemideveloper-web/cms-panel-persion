@@ -7,6 +7,7 @@ import ArticlesPage from "./pages/ArticlesPage/page";
 import CoursesPage from "./pages/CoursesPage/page";
 import Home from "./pages/Home/Home";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 const DashboardLayout = lazy(
   () => import("./components/Layouts/DashboardLayout/DashboardLayout"),
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+  { path: "*", element: <NotFoundPage /> },
 ]);
 
 export default router;
