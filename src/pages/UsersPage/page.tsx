@@ -7,7 +7,7 @@ import { useGetAllUsers } from "../../services/hooks/users/useGetAllUsers";
 import Users from "../../components/Users/Users";
 
 import UsersSkeleton from "../../skeletons/UsersSkeleton/UsersSkeleton";
-import Load from "../../Components/Load/Load";
+import Load from "../../components/Load/Load";
 
 function UsersPage() {
   const { data: users, isPending, isFetching } = useGetAllUsers();
@@ -20,7 +20,7 @@ function UsersPage() {
   return (
     <>
       {isFetching && <Load />}
-      <Users users={users} loading={isFetching} />
+      <Users users={users!} loading={isFetching} />
     </>
   );
 }
