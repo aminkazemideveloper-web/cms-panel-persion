@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
 
+  position: relative;
+
   block-size: 2rem;
   inline-size: min(35rem, calc(100% - 1rem));
 
@@ -24,6 +26,7 @@
     background-color: var(--color-primary);
     transition: all 0.2s ease;
     cursor: pointer;
+
     &:hover {
       background-color: var(--color-primary-hover);
       > svg {
@@ -47,9 +50,31 @@
     }
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+
+    inset-block-start: 90%;
+    inset-inline-start: 20%;
+
+    inline-size: 5rem;
+    block-size: 3px;
+    border-radius: 999rem;
+    background-color: var(--color-primary);
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(0);
+  }
+
   &:focus-within {
     outline: 2px solid var(--color-primary);
     outline-offset: -2px;
+
+    &::after {
+      visibility: visible;
+      animation: lineMove 2s 0.2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
   }
 }
 
@@ -70,5 +95,29 @@
     > button {
       inline-size: 5rem;
     }
+  }
+}
+@keyframes lineMove {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(60%);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0);
   }
 }

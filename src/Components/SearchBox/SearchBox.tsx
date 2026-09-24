@@ -31,7 +31,7 @@ function SearchBox({ onSearch, loading }: Props) {
         value={value}
         onChange={handleChangeInputValue}
       />
-      <button type="button">{loading ? <IoSearch /> : <Load />}</button>
+      <button type="button">{loading ? <Load /> : <IoSearch />}</button>
     </label>
   );
 }
