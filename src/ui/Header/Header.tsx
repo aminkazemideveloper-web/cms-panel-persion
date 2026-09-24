@@ -1,5 +1,5 @@
 import Container from "../../components/Container/Container";
-import "./Header.css";
+import styles from "./Header.module.css";
 import Button from "../../components/Button/Button";
 
 import { RxExit } from "react-icons/rx";
@@ -8,41 +8,44 @@ import ThemeButton from "../../components/ThemeButton/ThemeButton";
 import { BiSolidBellRing } from "react-icons/bi";
 import { Link } from "react-router";
 import TiTleSectionItem from "../../components/TiTleSectionItem/TiTleSectionItem";
+import { useEffect, useState } from "react";
+import clsx from "clsx";
 
 function Header() {
+  const [isShow, setIsShow] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsShow(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Container>
-      <header className="header">
-        <div className="header_right">
-          <div className="img_box">
+      <header className={clsx(styles.header, isShow && styles.active)}>
+        <div className={styles.profile}>
+          <div className={styles["img-box"]}>
             <img
-              className="header__img"
+              className={styles.img}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQksR3Lt2Iy2rlmUKvJmc27GcXpe297gINhTA&s"
               alt=""
             />
           </div>
-          {/* <div className="text_box">
-            <span className="header_title">امین کاظمی</span>
-            <p className="header_desc">توسعه دهنده جاوا اسکریپت</p>
-          </div> */}
 
           <TiTleSectionItem title="امین کاظمی" sub="توسعه دهنده وب" />
         </div>
-        <div className="header_left">
-          <div className="icon__sun">
-            <ThemeButton />
-          </div>
-          <div className="icon__notification">
-            <Button color="secondary" varient="solid">
-              <BiSolidBellRing className="notif_icon" />
-            </Button>
-          </div>
-          <div className="signIn">
-            <Link to="/" className="signIn_link">
-              <RxExit />
-              <span className="login__text">خروج از پنل</span>
-            </Link>
-          </div>
+        <div className={styles.actions}>
+          <ThemeButton />
+
+          <Button color="secondary" varient="solid">
+            <BiSolidBellRing />
+          </Button>
+
+          <Link to="/" className={styles["signIn-link"]}>
+            <RxExit />
+            <span className={styles["login-text"]}>خروج از پنل</span>
+          </Link>
         </div>
       </header>
     </Container>

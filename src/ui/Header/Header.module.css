@@ -1,0 +1,226 @@
+.header {
+  margin: 1rem auto;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  inline-size: 2rem;
+  block-size: 2rem;
+
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+
+  background-color: var(--color-surface--2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.7rem;
+  corner-shape: round;
+
+  transform: translateY(-100%);
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    opacity: 0;
+    transform: translateX(-30px);
+
+    .img-box {
+      inline-size: 50px;
+      block-size: 50px;
+      overflow: hidden;
+      border-radius: 999rem;
+
+      opacity: 0;
+      transform: scale(0.5) rotate(-20deg);
+
+      .img {
+        inline-size: 100%;
+        block-size: 100%;
+
+        object-fit: cover;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    opacity: 0;
+    transform: translateX(30px);
+
+    .signIn-link {
+      display: flex;
+      align-items: center;
+      gap: 1ch;
+      position: relative;
+
+      padding: 0.5rem;
+      text-decoration: none;
+
+      font-size: var(--font-size-300);
+      color: var(--color-white);
+      background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-primary-fade)
+      );
+
+      transition: all 0.2s;
+
+      border-radius: 0.3rem;
+
+      > svg {
+        font-size: var(--font-size-200);
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+      > .login-text {
+        display: none;
+      }
+
+      &:hover {
+        background: transparent;
+        color: var(--color-primary);
+        box-shadow: 0 0 5px var(--color-danger-fade);
+
+        color: var(--color-danger);
+
+        > svg {
+          transform: rotate(180deg) scale(1.1);
+        }
+      }
+    }
+  }
+
+  &.active {
+    visibility: visible;
+    animation: showHeader 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+    .profile {
+      animation: profileEnter 0.6s 1.6s ease-out forwards;
+    }
+
+    .img-box {
+      animation: profileImageEnter 0.6s 2s cubic-bezier(0.34, 1.56, 0.64, 1)
+        forwards;
+    }
+
+    .actions {
+      animation: actionsEnter 0.6s 1.6s ease-out forwards;
+    }
+  }
+}
+
+/* mobile size */
+@media screen and (min-width: 576px) {
+  .header {
+    .actions {
+      .signIn-link {
+        padding: 0.4rem;
+      }
+    }
+  }
+}
+/* tablet size */
+@media screen and (min-width: 768px) {
+  .header {
+    .actions {
+      .signIn-link {
+        top: 0;
+        padding: 0.4rem;
+      }
+    }
+  }
+}
+
+/* desktop size */
+@media screen and (min-width: 992px) {
+  .header {
+    margin: 3rem auto;
+    padding: 0 0.6rem;
+
+    .profile {
+      gap: 0.8rem;
+
+      .img-box {
+        inline-size: 70px;
+        block-size: 70px;
+      }
+    }
+
+    .actions {
+      .signIn-link {
+        top: 0;
+        padding: 0.35rem 0.7rem;
+
+        > Span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@keyframes showHeader {
+  0% {
+    inline-size: 2rem;
+    block-size: 2rem;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    inline-size: 3rem;
+    block-size: 3rem;
+
+    transform: translateY(10%);
+  }
+  100% {
+    inline-size: 100%;
+    block-size: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes profileEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes profileImageEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-20deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes actionsEnter {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
