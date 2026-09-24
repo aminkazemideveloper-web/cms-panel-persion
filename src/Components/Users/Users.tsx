@@ -12,6 +12,8 @@ type Props = {
 };
 
 function Users({ users, loading }: Props) {
+
+
   const showCreateModalRef = useRef<HTMLDialogElement | null>(null);
   const [search, setSearch] = useState("");
 
@@ -40,19 +42,15 @@ function Users({ users, loading }: Props) {
         onSearch={setSearch}
         loading={loading}
       />
-
       {filteredUsers.map((user) => (
         <UserItem user={user} key={user._id} />
       ))}
-
       {filteredUsers.length === 0 && (
         <div className="users__wrapper-warning">هیچ کاربری فعلا عضو نیست</div>
       )}
-
       {users.length > 0 && filteredUsers.length === 0 && (
         <div>جستجو برای پیدا کردن کاربر مورد نظر به نتیجه ای نرسید</div>
       )}
-
       <CreateUserModal ref={showCreateModalRef} />
     </div>
   );

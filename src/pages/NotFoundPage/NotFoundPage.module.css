@@ -1,0 +1,25 @@
+.not-found {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    block-size: 100dvh;
+    block-size: 100vh;
+
+
+    .title {
+        font-size: var(--font-size-800);
+    }
+    
+    a{
+            color: var(--color-primary);
+            transition: all 0.25s ease-in-out;
+            &:hover{
+                transform: scale(1.1) translateY(0.2rem);
+                color: var(--color-primary-hover);
+            }
+            &:active{
+                color: var(--color-secondary);
+            }
+    }
+
+}

@@ -6,6 +6,7 @@ import UsersPage from "./pages/UsersPage/page";
 import ArticlesPage from "./pages/ArticlesPage/page";
 import CoursesPage from "./pages/CoursesPage/page";
 import Home from "./pages/Home/Home";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 const DashboardLayout = lazy(
   () => import("./components/Layouts/DashboardLayout/DashboardLayout"),
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
         <DashboardLayout />
       </Suspense>
     ),
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
