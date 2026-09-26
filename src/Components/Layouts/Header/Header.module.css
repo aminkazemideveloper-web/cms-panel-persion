@@ -56,12 +56,14 @@
     transform: translateX(30px);
 
     .notif {
+      color: var(--color-danger-fade);
+      transition: all 0.2s ease;
       > svg {
         opacity: 1;
         transform: translateX(0);
-        color: var(--color-text);
       }
       &:hover {
+        background-color: var(--color-danger-light);
         > svg {
           animation: wave 0.5s forwards linear;
         }
