@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCreateCourse } from "../../services/hooks/courses/useCreateCourse";
 import { toast } from "react-toastify";
-import Inputbox from "../../components/Inputbox/Inputbox";
+import Inputbox from "../../components/shared/Inputbox/Inputbox";
 
 type Values = z.infer<typeof CourseSchema>;
 

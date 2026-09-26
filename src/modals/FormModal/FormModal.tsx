@@ -2,7 +2,7 @@ import { type ComponentPropsWithoutRef, type RefObject } from "react";
 import Modal from "../Modal/Modal";
 import styles from "./FormModal.module.css";
 import clsx from "clsx";
-import Button from "../../components/Button/Button";
+import Button from "../../components/shared/Button/Button";
 
 type Form = ComponentPropsWithoutRef<"form">;
 

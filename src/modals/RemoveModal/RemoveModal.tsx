@@ -3,7 +3,7 @@ import Modal from "../Modal/Modal";
 
 import styles from "./RemoveModal.module.css";
 import clsx from "clsx";
-import Button from "../../components/Button/Button";
+import Button from "../../components/shared/Button/Button";
 
 type Props = ComponentPropsWithoutRef<"div"> & {
   heading: ComponentProps<typeof Modal>["heading"];

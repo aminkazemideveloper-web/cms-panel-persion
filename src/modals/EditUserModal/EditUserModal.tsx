@@ -1,5 +1,5 @@
 import FormModal from "../FormModal/FormModal";
-import Inputbox from "../../components/Inputbox/Inputbox";
+import Inputbox from "../../components/shared/Inputbox/Inputbox";
 import { type ComponentProps } from "react";
 import type { UserType } from "../../types/user-type";
 import { useForm } from "react-hook-form";

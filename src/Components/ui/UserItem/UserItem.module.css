@@ -1,0 +1,133 @@
+.userItem-wraper {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  display: flex;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  .profile {
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+
+    .img-box {
+      width: 50px;
+      height: 50px;
+
+      .img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      align-items: start;
+
+      .title {
+        font-size: var(--font-size-400);
+        font-weight: 600;
+        color: var(--color-text);
+      }
+
+      .mail {
+        font-size: var(--font-size-300);
+        font-weight: 400;
+        color: var(--color-text--sub);
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+
+    > button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > .icon {
+      }
+      > .text {
+        transform: translateX(0) translateY(0);
+        &.active {
+          animation: remove 1s forwards;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .userItem__wraper {
+    padding: 0.4rem;
+    margin-top: 0.4rem;
+  }
+
+  .userItem__left {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: start;
+    row-gap: 0.2rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .userItem__wraper {
+    padding: 0.6rem;
+    margin-top: 0.6rem;
+  }
+
+  .userItem__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .userItem__left {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    row-gap: 0.2rem;
+  }
+
+  .userItem__wraper {
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .userItem__wraper {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .userItem__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.2rem;
+  }
+}
+
+@keyframes remove {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(50%) translateY(-3px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(100%) translateY(0);
+  }
+}

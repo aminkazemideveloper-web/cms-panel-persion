@@ -1,5 +1,5 @@
 import type z from "zod";
-import Inputbox from "../../components/Inputbox/Inputbox";
+import Inputbox from "../../components/shared/Inputbox/Inputbox";
 import FormModal from "../FormModal/FormModal";
 import { ArticleSchemas } from "../../vlidators/article-schemas";
 import type { ComponentProps } from "react";

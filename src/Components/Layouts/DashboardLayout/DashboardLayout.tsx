@@ -1,28 +1,26 @@
 import { Outlet } from "react-router";
 import styles from "./DashboardLayout.module.css";
-import Container from "../../Container/Container";
 
-import Header from "../../../ui/Header/Header";
-import Sidebar from "../../../ui/Sidebar/Sidebar";
-import HeaderSection from "../Common/HeaderSection/HeaderSection";
+import Header from "../Header/Header";
+import Sidebar from "../Sidebar/Sidebar";
+import HeaderSection from "../HeaderSection/HeaderSection";
+import clsx from "clsx";
 
 function DashboardLayout() {
   return (
-    <Container>
-      <div className={styles["dashboard__layout"]}>
-        <Header />
+    <div className={clsx(styles["dashboard__layout"], "container")}>
+      <Header />
 
-        <main className={styles.main}>
-          <div className={styles.sidebar}>
-            <Sidebar />
-          </div>
-          <div className={styles.content}>
-            <HeaderSection />
-            <Outlet />
-          </div>
-        </main>
-      </div>
-    </Container>
+      <main className={styles.main}>
+        <div className={styles.sidebar}>
+          <Sidebar />
+        </div>
+        <div className={styles.content}>
+          <HeaderSection />
+          <Outlet />
+        </div>
+      </main>
+    </div>
   );
 }
 

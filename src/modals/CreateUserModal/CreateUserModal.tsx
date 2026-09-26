@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import Inputbox from "../../components/Inputbox/Inputbox";
+import Inputbox from "../../components/shared/Inputbox/Inputbox";
 import FormModal from "../FormModal/FormModal";
 import { z } from "zod";
 import { UserSchema } from "../../vlidators/user-schema";

@@ -6,9 +6,9 @@ import { RouterProvider } from "react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import store from "./redux/store.ts";
-import router from "./Routes.tsx";
+import router from "./Router.tsx";
 
-import Toast from "./components/Toast/Toast.tsx";
+import Toast from "./components/shared/Toast/Toast.tsx";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.tsx";
 
 const queryClient = new QueryClient({

@@ -1,13 +1,11 @@
-import "./Users.css";
-
 import useTitle from "../../hooks/useTitle";
 
 import { useGetAllUsers } from "../../services/hooks/users/useGetAllUsers";
 
-import Users from "../../components/Users/Users";
+import Users from "../../components/templates/Users/Users";
 
 import UsersSkeleton from "../../skeletons/UsersSkeleton/UsersSkeleton";
-import Load from "../../components/Load/Load";
+import Load from "../../components/shared/Load/Load";
 
 function UsersPage() {
   const { data: users, isPending, isFetching } = useGetAllUsers();

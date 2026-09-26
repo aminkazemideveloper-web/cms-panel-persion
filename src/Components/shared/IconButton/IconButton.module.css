@@ -1,0 +1,21 @@
+.icon-button {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1ch;
+  font-size: var(--font-size-300);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+  border-radius: 999rem;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  color: var(--color-text);
+
+  &:hover {
+    background-color: var(--color-surface--1);
+  }
+}

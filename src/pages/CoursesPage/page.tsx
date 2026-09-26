@@ -1,10 +1,9 @@
 import useTitle from "../../hooks/useTitle";
-import Courses from "../../components/Courses/Courses";
+import Courses from "../../components/templates/Courses/Courses";
 import { useGetAllCourses } from "../../services/hooks/courses/useGetAllCourses";
 
-import "./Courses.css";
 import UsersSkeleton from "../../skeletons/UsersSkeleton/UsersSkeleton";
-import Load from "../../components/Load/Load";
+import Load from "../../components/shared/Load/Load";
 function CoursesPage() {
   const { data: courses, isPending, isFetching } = useGetAllCourses();
 
@@ -17,7 +16,7 @@ function CoursesPage() {
   return (
     <>
       {isFetching && <Load />}
-      <Courses courses={courses} />
+      <Courses courses={courses!} />
     </>
   );
 }

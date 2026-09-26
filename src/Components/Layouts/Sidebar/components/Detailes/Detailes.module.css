@@ -1,0 +1,46 @@
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+
+  border-top: 1px solid var(--color-border);
+
+  .label {
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+    font-size: var(--font-size-300);
+    .icon {
+      position: relative;
+      top: 2px;
+
+      color: var(--color-text--sub);
+    }
+
+    .text {
+      color: var(--color-text);
+      font-weight: 400;
+    }
+  }
+
+  .value {
+    font-size: var(--font-size-400);
+    font-weight: 600;
+    color: var(--main-color);
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 768px) {
+  .detail {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* desktop size */
+@media screen and (min-width: 992px) {
+  .detail {
+    padding: 0.5rem 1rem;
+  }
+}
