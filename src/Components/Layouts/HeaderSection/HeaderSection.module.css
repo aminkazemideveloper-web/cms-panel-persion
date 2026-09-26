@@ -37,9 +37,10 @@
       block-size: 4rem;
 
       background: linear-gradient(
-        to top right,
-        var(--color-primary-fade),
-        rgba(255, 255, 255, 0.2)
+        to bottom left,
+        var(--color-primary-light),
+        var(--color-white) 10%,
+        var(--color-primary-light)
       );
       backdrop-filter: blur(6px);
 
