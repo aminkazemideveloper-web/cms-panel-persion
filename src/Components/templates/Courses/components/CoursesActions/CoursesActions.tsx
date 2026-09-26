@@ -1,7 +1,10 @@
 import clsx from "clsx";
 import Button from "../../../../shared/Button/Button";
 import styles from "./CoursesActions.module.css";
-import { BiCategory, BiPlusMedical, BiSolidOffer } from "react-icons/bi";
+
+import MingcuteAddFill from "../../../../../icons/MingcuteAddFill";
+import MingcutePercentageLine from "../../../../../icons/MingcutePercentageLine";
+import MingcuteCalendarTimeAddLine from "../../../../../icons/MingcuteCalendarTimeAddLine";
 
 type Props = {
   showModal: () => void;
@@ -17,7 +20,7 @@ function CoursesActions({ showModal }: Props) {
         type="button"
         onClick={showModal}
       >
-        <BiPlusMedical />
+        <MingcuteAddFill />
         افزودن دوره ی جدید
       </Button>
       <Button
@@ -25,7 +28,7 @@ function CoursesActions({ showModal }: Props) {
         varient="solid"
         className={clsx(styles.btn, styles.danger)}
       >
-        <BiSolidOffer />
+        <MingcutePercentageLine />
         اعمال تخفیف همه دوره ها
       </Button>
       <Button
@@ -33,7 +36,7 @@ function CoursesActions({ showModal }: Props) {
         varient="solid"
         className={clsx(styles.btn, styles.secondary)}
       >
-        <BiCategory />
+        <MingcuteCalendarTimeAddLine />
         افزودن دسته بندی
       </Button>
     </div>

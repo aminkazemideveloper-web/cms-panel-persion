@@ -7,14 +7,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import useCreateUser from "../../services/hooks/users/useCreateUser";
 import { toast } from "react-toastify";
 import type { ComponentProps } from "react";
-import {
-  BiMessageDetail,
-  BiSolidCity,
-  BiSolidPlusSquare,
-  BiUser,
-  BiUserPin,
-  BiUserPlus,
-} from "react-icons/bi";
+
+import MingcuteUser1Fill from "../../icons/MingcuteUser1Fill";
+import MingcuteUserQuestionFill from "../../icons/MingcuteUserQuestionFill";
+import MingcuteNewdotLine from "../../icons/MingcuteNewdotLine";
+import MingcuteMailSendLine from "../../icons/MingcuteMailSendLine";
+import MingcutePhoneCallLine from "../../icons/MingcutePhoneCallLine";
+import MingcuteEiffelTowerLine from "../../icons/MingcuteEiffelTowerLine";
 
 type Values = z.infer<typeof UserSchema>;
 
@@ -56,27 +55,27 @@ function CreateUserModal({ ref }: Props) {
       <Inputbox
         type="text"
         label="اسم"
-        icon={<BiUser />}
+        icon={<MingcuteUser1Fill />}
         {...register("firstname")}
         error={errors.firstname?.message}
       />
       <Inputbox
         type="text"
-        icon={<BiUserPlus />}
+        icon={<MingcuteUserQuestionFill />}
         label="نام خانوادگی"
         {...register("lastname")}
         error={errors.lastname?.message}
       />
       <Inputbox
         type="text"
-        icon={<BiUserPin />}
+        icon={<MingcuteNewdotLine />}
         label="نام کاربری"
         {...register("username")}
         error={errors.username?.message}
       />
       <Inputbox
         type="email"
-        icon={<BiMessageDetail />}
+        icon={<MingcuteMailSendLine />}
         label="ایمیل"
         {...register("email")}
         error={errors.email?.message}
@@ -84,7 +83,7 @@ function CreateUserModal({ ref }: Props) {
 
       <Inputbox
         type="number"
-        icon={<BiSolidPlusSquare />}
+        icon={<MingcutePhoneCallLine />}
         label="سن"
         {...register("age", {
           setValueAs: (value) => {
@@ -97,7 +96,7 @@ function CreateUserModal({ ref }: Props) {
       <Inputbox
         type="text"
         label="شهر"
-        icon={<BiSolidCity />}
+        icon={<MingcuteEiffelTowerLine />}
         {...register("city")}
         error={errors.city?.message}
       />

@@ -1,8 +1,8 @@
-import { BiPlus } from "react-icons/bi";
 import Button from "../../../../shared/Button/Button";
 import SearchBox from "../../../../shared/SearchBox/SearchBox";
 import styles from "./Toolbar.module.css";
 import clsx from "clsx";
+import MingcuteAddFill from "../../../../../icons/MingcuteAddFill";
 
 type Props = {
   onShowModal: () => void;
@@ -21,7 +21,7 @@ function Toolbar({ onShowModal, onSearch, loading }: Props) {
         varient="solid"
         className={clsx(styles.btn, styles.primary)}
       >
-        <BiPlus className={styles.icon} />
+        <MingcuteAddFill className={styles.icon} />
         <span className={styles.text}>کاربر جدید</span>
       </Button>
     </div>

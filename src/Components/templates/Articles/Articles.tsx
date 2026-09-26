@@ -11,6 +11,7 @@ import { useArticles } from "./useArticles";
 
 import styles from "./Articles.module.css";
 import EmptyCard from "../../ui/EmptyCard/EmptyCard";
+import MingcuteAddFill from "../../../icons/MingcuteAddFill";
 
 type Props = {
   articles: ArticleType[];
@@ -34,7 +35,7 @@ function Articles({ articles }: Props) {
           onClick={handleShowCreateCourseModal}
           className={clsx(styles.btn, styles.primary)}
         >
-          <BiPlus />
+          <MingcuteAddFill />
           افزودن مقاله ی جدید
         </Button>
       </div>

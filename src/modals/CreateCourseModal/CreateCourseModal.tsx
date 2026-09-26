@@ -7,6 +7,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useCreateCourse } from "../../services/hooks/courses/useCreateCourse";
 import { toast } from "react-toastify";
 import Inputbox from "../../components/shared/Inputbox/Inputbox";
+import MingcuteText2Line from "../../icons/MingcuteText2Line";
+import MingcuteCalendarTimeAddLine from "../../icons/MingcuteCalendarTimeAddLine";
+import MingcuteCurrencyDollar2Line from "../../icons/MingcuteCurrencyDollar2Line";
+import MingcutePercentageLine from "../../icons/MingcutePercentageLine";
+import MingcuteNewdotLine from "../../icons/MingcuteNewdotLine";
+import TextErea from "../../components/shared/TextErea/TextErea";
 
 type Values = z.infer<typeof CourseSchema>;
 
@@ -45,35 +51,41 @@ function CreateCourseModal({ ref }: Props) {
       onSubmit={handleSubmit(handleCreateSubmitForm)}
     >
       <Inputbox
+        icon={<MingcuteText2Line />}
         label="عنوان"
         {...register("title")}
         error={errors.title?.message}
       />
       <Inputbox
+        icon={<MingcuteCalendarTimeAddLine />}
         label="دسته بندی"
         {...register("category")}
         error={errors.category?.message}
       />
       <Inputbox
+        icon={<MingcuteCurrencyDollar2Line />}
         label="قیمت"
         type="number"
         {...register("price", { valueAsNumber: true })}
         error={errors.price?.message}
       />
       <Inputbox
+        icon={<MingcutePercentageLine />}
         label="تخفیف"
         type="number"
         {...register("discount", { valueAsNumber: true })}
         error={errors.discount?.message}
       />
       <Inputbox
+        icon={<MingcuteNewdotLine />}
         label="تعداد دانش آموختگان"
         type="number"
         {...register("registersCount", { valueAsNumber: true })}
         error={errors.registersCount?.message}
       />
-      <Inputbox
-        label="توضیحات"
+
+      <TextErea
+        lable="توضیحات"
         {...register("desc")}
         error={errors.desc?.message}
       />

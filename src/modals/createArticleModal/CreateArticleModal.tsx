@@ -7,6 +7,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import useCreateArticle from "../../services/hooks/articles/useCreateArticle";
 import { toast } from "react-toastify";
+import TextErea from "../../components/shared/TextErea/TextErea";
+import MingcuteText2Line from "../../icons/MingcuteText2Line";
+import MingcuteCalendarTimeAddLine from "../../icons/MingcuteCalendarTimeAddLine";
+import MingcuteNewdotLine from "../../icons/MingcuteNewdotLine";
 
 type Props = Pick<ComponentProps<typeof FormModal>, "ref">;
 type Values = z.infer<typeof ArticleSchemas>;
@@ -44,25 +48,34 @@ function CreateArticleModal({ ref }: Props) {
       onSubmit={handleSubmit(handleCreateSubmitForm)}
     >
       <Inputbox
+        icon={<MingcuteText2Line />}
         label="عنوان"
         {...register("title")}
         error={errors.title?.message}
       />
-      <Inputbox
+      {/* <Inputbox
         label="توضیحات"
         {...register("desc")}
         error={errors.desc?.message}
-      />
+      /> */}
+
       <Inputbox
+        icon={<MingcuteCalendarTimeAddLine />}
         label="دسته بندی"
         {...register("category")}
         error={errors.category?.message}
       />
       <Inputbox
+        icon={<MingcuteNewdotLine />}
         type="number"
         label="مطالعه شده"
         {...register("views", { valueAsNumber: true })}
         error={errors.views?.message}
+      />
+      <TextErea
+        lable="توضیحات"
+        {...register("desc")}
+        error={errors.desc?.message}
       />
     </FormModal>
   );

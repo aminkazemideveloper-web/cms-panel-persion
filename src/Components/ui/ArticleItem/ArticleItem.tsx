@@ -1,7 +1,5 @@
 import styles from "./ArticleItem.module.css";
 
-import { HiOutlineRectangleGroup } from "react-icons/hi2";
-import { MdManageAccounts } from "react-icons/md";
 import type { ArticleType } from "../../../types/article-type";
 
 import RemoveModal from "../../../modals/RemoveModal/RemoveModal";
@@ -12,6 +10,8 @@ import SubGroup from "../SubGroup/SubGroup";
 import Divider from "../../shared/Divider/Divider";
 import Button from "../../shared/Button/Button";
 import { useArticleItem } from "./useArticleItem";
+import MingcuteNewdotLine from "../../../icons/MingcuteNewdotLine";
+import MingcuteCalendarTimeAddLine from "../../../icons/MingcuteCalendarTimeAddLine";
 
 type Props = {
   article: ArticleType;
@@ -37,14 +37,14 @@ function ArticleItem({ article }: Props) {
         <div className={styles.detailes}>
           <div className={styles.content}>
             <SubGroup
-              icon={<HiOutlineRectangleGroup />}
+              icon={<MingcuteCalendarTimeAddLine />}
               lable="دسته بندی"
               value={category}
             />
             <Divider />
 
             <SubGroup
-              icon={<MdManageAccounts />}
+              icon={<MingcuteNewdotLine />}
               lable="تعداد بازدید"
               value={views}
             />

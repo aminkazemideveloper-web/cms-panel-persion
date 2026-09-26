@@ -37,7 +37,7 @@ function EditUserModal({ ref, defaultValues }: Props) {
     <FormModal
       onSubmit={handleSubmit(handleSubmitForm)}
       ref={ref}
-      heading="ویرایش اطلاعات"
+      heading="ویرایش اطلاعات کاربر"
     >
       <Inputbox type="text" label="اسم" {...register("firstname")} />
       <Inputbox type="text" label="نام خانوادگی" {...register("lastname")} />

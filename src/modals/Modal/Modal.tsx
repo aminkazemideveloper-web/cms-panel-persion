@@ -8,6 +8,8 @@ import {
   type RefObject,
 } from "react";
 import { BiWindowClose } from "react-icons/bi";
+import MingcuteCloseLine from "../../icons/MingcuteCloseLine";
+import IconButton from "../../components/shared/IconButton/IconButton";
 
 type Props = ComponentPropsWithoutRef<"dialog"> & {
   heading: string;
@@ -38,9 +40,10 @@ export default function Modal({
     >
       <div className="content">
         <header>
-          <div onClick={() => ref?.current?.close()}>
-            <BiWindowClose />
-          </div>
+          <IconButton onClick={() => ref?.current?.close()}>
+            <MingcuteCloseLine />
+          </IconButton>
+
           <div>{heading}</div>
         </header>
 

@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import clsx from "clsx";
 import { BiSolidLeftArrow } from "react-icons/bi";
 import type { DashboardItemType } from "../../../types/dashboard-item-type";
+import MingcuteArrowLeftFill from "../../../icons/MingcuteArrowLeftFill";
 
 type Props = {
   item: DashboardItemType;
@@ -23,7 +24,7 @@ function DashboardCard({ item }: Props) {
       <div className={styles.footer}>
         <Link className={styles.link} to={item.link}>
           <span> مشاهده صفحه</span>
-          <BiSolidLeftArrow className={styles.arrow} />
+          <MingcuteArrowLeftFill className={styles.arrow} />
         </Link>
       </div>
     </div>

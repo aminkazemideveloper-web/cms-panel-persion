@@ -1,7 +1,10 @@
-import { BiBookContent, BiCodeCurly, BiSolidUserAccount } from "react-icons/bi";
+
 import useGetAllArticles from "../../services/hooks/articles/useGetAllArticles";
 import { useGetAllCourses } from "../../services/hooks/courses/useGetAllCourses";
 import { useGetAllUsers } from "../../services/hooks/users/useGetAllUsers";
+import MingcuteNewdotLine from "../../icons/MingcuteNewdotLine";
+import MingcuteBook3Line from "../../icons/MingcuteBook3Line";
+import MingcuteChartBarLine from "../../icons/MingcuteChartBarLine";
 
 export const useCompositions = () => {
   const { data: users } = useGetAllUsers();
@@ -12,7 +15,7 @@ export const useCompositions = () => {
     {
       id: 1,
       title: "تعداد کاربران",
-      icon: <BiSolidUserAccount />,
+      icon: <MingcuteNewdotLine />,
       link: "/users",
       count: users?.length ?? 0,
       color: "red",
@@ -20,7 +23,7 @@ export const useCompositions = () => {
     {
       id: 2,
       title: "تعداد مقالات",
-      icon: <BiBookContent />,
+      icon: <MingcuteBook3Line />,
       link: "/articles",
       count: articles?.length ?? 0,
       color: "green",
@@ -28,7 +31,7 @@ export const useCompositions = () => {
     {
       id: 3,
       title: "تعداد دوره ها",
-      icon: <BiCodeCurly />,
+      icon: <MingcuteChartBarLine />,
       link: "/courses",
       count: courses?.length ?? 0,
       color: "blue",

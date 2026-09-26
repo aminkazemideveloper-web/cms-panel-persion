@@ -1,8 +1,6 @@
 import Button from "../../shared/Button/Button";
 import "./CourseItem.css";
-import { FaSackDollar } from "react-icons/fa6";
-import { HiOutlineRectangleGroup } from "react-icons/hi2";
-import { MdManageAccounts } from "react-icons/md";
+
 import Badge from "../../shared/Badge/Badge";
 import type { CourseType } from "../../../types/course-type";
 import RemoveModal from "../../../modals/RemoveModal/RemoveModal";
@@ -10,6 +8,9 @@ import TiTleSectionItem from "../../shared/TiTleSectionItem/TiTleSectionItem";
 import SubGroup from "../SubGroup/SubGroup";
 import Divider from "../../shared/Divider/Divider";
 import { useCourseItem } from "./useCourseItem";
+import MingcuteNewdotLine from "../../../icons/MingcuteNewdotLine";
+import MingcuteCalendarTimeAddLine from "../../../icons/MingcuteCalendarTimeAddLine";
+import MingcuteCurrencyDollar2Line from "../../../icons/MingcuteCurrencyDollar2Line";
 
 type Props = {
   course: CourseType;
@@ -38,16 +39,20 @@ function CourseItem({ course }: Props) {
 
         <div className="courseItem__left--bottom">
           <div className="courseItem__left--bottom--right">
-            <SubGroup icon={<FaSackDollar />} lable="قیمت" value={price} />
+            <SubGroup
+              icon={<MingcuteCurrencyDollar2Line />}
+              lable="قیمت"
+              value={price}
+            />
             <Divider height="1rem" />
             <SubGroup
-              icon={<HiOutlineRectangleGroup />}
+              icon={<MingcuteCalendarTimeAddLine />}
               lable="دسته بندی"
               value={category}
             />
             <Divider height="1rem" />
             <SubGroup
-              icon={<MdManageAccounts />}
+              icon={<MingcuteNewdotLine />}
               lable="تعدادفروش"
               value={registersCount}
             />
