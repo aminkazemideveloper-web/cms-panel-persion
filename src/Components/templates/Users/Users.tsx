@@ -28,12 +28,15 @@ function Users({ users, loading }: Props) {
         onSearch={setSearch}
         loading={loading}
       />
-      {filteredUsers.map((user) => (
-        <UserItem user={user} key={user._id} />
-      ))}
-      {filteredUsers.length === 0 && (
-        <EmptyCard title="هیچ کاربری فعلا عضو نیست" />
-      )}
+      <div className={styles.content}>
+        {filteredUsers.map((user) => (
+          <UserItem user={user} key={user._id} />
+        ))}
+
+        {filteredUsers.length === 0 && (
+          <EmptyCard title="هیچ کاربری فعلا عضو نیست" />
+        )}
+      </div>
 
       <CreateUserModal ref={showCreateModalRef} />
     </div>

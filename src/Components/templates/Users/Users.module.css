@@ -2,4 +2,13 @@
   padding: 2rem;
   display: grid;
   gap: 3rem;
+
+  .content {
+    display: grid;
+    padding-block-end: 2rem;
+    padding-inline: 1rem;
+    gap: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+  }
 }

@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 import HeaderSection from "../HeaderSection/HeaderSection";
 import clsx from "clsx";
+import Card from "../../shared/Card/Card";
 
 function DashboardLayout() {
   return (
@@ -15,10 +16,10 @@ function DashboardLayout() {
         <div className={styles.sidebar}>
           <Sidebar />
         </div>
-        <div className={styles.content}>
+        <Card className={styles.content}>
           <HeaderSection />
           <Outlet />
-        </div>
+        </Card>
       </main>
     </div>
   );

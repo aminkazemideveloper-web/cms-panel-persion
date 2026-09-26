@@ -1,0 +1,10 @@
+.card {
+  box-shadow: var(--shadow-normal);
+  border-radius: 0.6rem;
+  corner-shape: round;
+
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: var(--shadow-heavy);
+  }
+}

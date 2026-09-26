@@ -14,6 +14,7 @@ import IconButton from "../../shared/IconButton/IconButton";
 import MingcuteDelete2Line from "../../../icons/MingcuteDelete2Line";
 
 import MingcutePencil3AiLine from "../../../icons/MingcutePencil3AiLine";
+import Card from "../../shared/Card/Card";
 
 type Props = {
   course: CourseType;
@@ -29,7 +30,7 @@ function CourseItem({ course }: Props) {
   } = useCourseItem({ id: _id });
 
   return (
-    <div className="coureItem__wrapper">
+    <Card className="coureItem__wrapper">
       <div className="courseItem__right">
         <img
           className="courseItem__right--img"
@@ -62,19 +63,19 @@ function CourseItem({ course }: Props) {
           </div>
           <div className="courseItem__left--bottom--left">
             <IconButton
-              color="danger"
+              className="remove"
               onClick={handleRemoveModalShowButtonClick}
             >
-              <MingcuteDelete2Line className="remove" />
+              <MingcuteDelete2Line />
             </IconButton>
-            <IconButton>
-              <MingcutePencil3AiLine className="edit" />
+            <IconButton className="edit">
+              <MingcutePencil3AiLine />
             </IconButton>
           </div>
         </div>
       </div>
       <div className="coureItem__badge">
-        <Badge color="green" variant="Square" size="sm">
+        <Badge color="green" variant="Square" size="md">
           {discount}%
         </Badge>
       </div>
@@ -85,7 +86,7 @@ function CourseItem({ course }: Props) {
         onRemove={handleRemoveCourse}
         title={title}
       />
-    </div>
+    </Card>
   );
 }
 

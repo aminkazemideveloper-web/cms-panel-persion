@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 500px;
+
   .articleContainer-warning {
     display: flex;
     align-items: center;
@@ -16,12 +17,11 @@
     font-weight: 600;
   }
 
-  
   .articles__items {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.5rem;
     max-height: 400px;
     overflow-y: auto;
     padding: 1rem;

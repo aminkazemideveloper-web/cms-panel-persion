@@ -2,6 +2,9 @@
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 1rem;
+  padding-inline: 1rem;
+  padding-block-end: 2rem;
+  min-block-size: 400px;
   .header {
     margin-block: 1rem;
     > h2 {

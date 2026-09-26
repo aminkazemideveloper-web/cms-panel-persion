@@ -14,6 +14,7 @@ import MingcuteCalendarTimeAddLine from "../../../icons/MingcuteCalendarTimeAddL
 import IconButton from "../../shared/IconButton/IconButton";
 import MingcuteDelete2Line from "../../../icons/MingcuteDelete2Line";
 import MingcutePencil3AiLine from "../../../icons/MingcutePencil3AiLine";
+import Card from "../../shared/Card/Card";
 
 type Props = {
   article: ArticleType;
@@ -26,7 +27,7 @@ function ArticleItem({ article }: Props) {
       id: _id,
     });
   return (
-    <div className={styles["articleItem__wrapper"]}>
+    <Card className={styles["articleItem__wrapper"]}>
       <div className={styles["image-box"]}>
         <img
           className={styles.image}
@@ -71,7 +72,7 @@ function ArticleItem({ article }: Props) {
         title={title}
         onRemove={handleRemoveArticle}
       />
-    </div>
+    </Card>
   );
 }
 

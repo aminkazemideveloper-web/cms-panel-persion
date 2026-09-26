@@ -9,12 +9,13 @@ import MingcutePencil3AiLine from "../../../icons/MingcutePencil3AiLine";
 
 import "./Sidebar.css";
 import { useSidebar } from "./useSidebar";
+import Card from "../../shared/Card/Card";
 
 function Sidebar() {
   const { detailesData } = useSidebar();
 
   return (
-    <div className="sidebar">
+    <Card className="sidebar">
       <div className="sidebar_top">
         <div className="sidebar_img--background">
           <img
@@ -45,7 +46,7 @@ function Sidebar() {
           </Button>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
 

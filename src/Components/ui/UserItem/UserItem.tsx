@@ -1,4 +1,3 @@
-import Button from "../../shared/Button/Button";
 import styles from "./UserItem.module.css";
 
 import type { UserType } from "../../../types/user-type";
@@ -6,10 +5,14 @@ import type { UserType } from "../../../types/user-type";
 import RemoveModal from "../../../modals/RemoveModal/RemoveModal";
 
 import EditUserModal from "../../../modals/EditUserModal/EditUserModal";
-import { BiInfoCircle, BiMessage } from "react-icons/bi";
-import { IoTrashBin } from "react-icons/io5";
 
 import { useUserItem } from "./useUserItem";
+import IconButton from "../../shared/IconButton/IconButton";
+import MingcutePencil3AiLine from "../../../icons/MingcutePencil3AiLine";
+import MingcuteDelete2Line from "../../../icons/MingcuteDelete2Line";
+import MingcuteInformationLine from "../../../icons/MingcuteInformationLine";
+import Card from "../../shared/Card/Card";
+import TiTleSectionItem from "../../shared/TiTleSectionItem/TiTleSectionItem";
 
 type Props = {
   user: UserType;
@@ -27,7 +30,7 @@ function UserItem({ user }: Props) {
   } = useUserItem();
 
   return (
-    <div className={styles["userItem-wraper"]}>
+    <Card className={styles["userItem-wraper"]}>
       <div className={styles.profile}>
         <div className={styles["img-box"]}>
           <img
@@ -35,35 +38,29 @@ function UserItem({ user }: Props) {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQksR3Lt2Iy2rlmUKvJmc27GcXpe297gINhTA&s"
             alt=""
           />
-
         </div>
-        <div className={styles.content}>
+        {/* <div className={styles.content}>
           <span className={styles.title}>
             {firstname} {lastname}
           </span>
           <span className={styles.mail}>{email}</span>
-        </div>
+        </div> */}
+
+        <TiTleSectionItem title={`${firstname} ${lastname}`} sub={email} />
       </div>
       <div className={styles.actions}>
-        <Button color="secondary" varient="solid">
-          <BiMessage />
-          پیام ها
-        </Button>
-        <Button
-          color="primary"
-          varient="outlined"
+        <IconButton className={styles.info}>
+          <MingcuteInformationLine />
+        </IconButton>
+        <IconButton
+          className={styles.edit}
           onClick={handleshowEditUserModalClick}
         >
-          <BiInfoCircle />
-          ویرایش
-        </Button>
-        <Button color="danger" varient="solid" onClick={removeHandler}>
-          <span className={styles.icon}>
-            <IoTrashBin />
-          </span>
-          <span className={styles.text}></span>
-          حذف
-        </Button>
+          <MingcutePencil3AiLine />
+        </IconButton>
+        <IconButton onClick={removeHandler} className={styles.remove}>
+          <MingcuteDelete2Line />
+        </IconButton>
       </div>
 
       <RemoveModal
@@ -74,7 +71,7 @@ function UserItem({ user }: Props) {
       />
 
       <EditUserModal ref={showEditModalRef} defaultValues={user} />
-    </div>
+    </Card>
   );
 }
 

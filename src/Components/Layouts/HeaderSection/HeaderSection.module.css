@@ -17,9 +17,7 @@
     padding: 0 1.5rem;
     border-radius: 0.5rem;
     background-color: var(--color-surface--3);
-    box-shadow:
-      0 4px 6px -1px rgb(0 0 0 / 0.1),
-      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow: var(--shadow-normal);
 
     list-style: none;
 

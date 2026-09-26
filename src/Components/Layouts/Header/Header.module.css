@@ -6,18 +6,16 @@
   align-items: center;
 
   inline-size: 2rem;
-  block-size: 2rem;
+  /* block-size: 3rem; */
 
   opacity: 0;
   overflow: hidden;
   visibility: hidden;
 
-  background-color: var(--color-surface--2);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  border-radius: 0.7rem;
-  corner-shape: round;
+  background-color: var(--color-surface--3);
 
   transform: translateY(-100%);
+
   .profile {
     display: flex;
     align-items: center;
@@ -53,7 +51,6 @@
     transform: translateX(30px);
 
     .notif {
-      /* color: var(--color-danger-hover); */
       > svg {
         opacity: 1;
         transform: translateX(0);
@@ -156,7 +153,7 @@
 @media screen and (min-width: 992px) {
   .header {
     margin: 3rem auto;
-    padding: 0 0.6rem;
+    padding: 0.5rem 0.6rem;
 
     .profile {
       gap: 0.8rem;
@@ -170,7 +167,7 @@
     .actions {
       .signIn-link {
         top: 0;
-        /* padding: 0.35rem 0.7rem; */
+
         aspect-ratio: 9/3;
 
         > .login-text {

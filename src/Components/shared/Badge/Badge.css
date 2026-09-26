@@ -31,8 +31,8 @@
 
 .colorGreen {
   color: var(--color-white);
-  background-color: var(--color-green-600);
-  box-shadow: 0 0 5px var(--color-green-600);
+  background-color: var(--color-success);
+  box-shadow: 0 0 5px var(--color-success-hover);
 }
 
 .colorBrown {

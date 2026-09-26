@@ -1,8 +1,4 @@
-
 import styles from "./Header.module.css";
-
-
-
 
 import { Link } from "react-router";
 import TiTleSectionItem from "../../shared/TiTleSectionItem/TiTleSectionItem";
@@ -12,6 +8,7 @@ import IconButton from "../../shared/IconButton/IconButton";
 import ThemeSwitch from "../../shared/ThemeSwitch/ThemeSwitch";
 import MingcuteExitLine from "../../../icons/MingcuteExitLine";
 import MingcuteNotificationFill from "../../../icons/MingcuteNotificationFill";
+import Card from "../../shared/Card/Card";
 
 function Header() {
   const [isShow, setIsShow] = useState(false);
@@ -24,9 +21,7 @@ function Header() {
   }, []);
 
   return (
-    <header
-      className={clsx(styles.header, "container", isShow && styles.active)}
-    >
+    <Card className={clsx(styles.header, "container", isShow && styles.active)}>
       <div className={styles.profile}>
         <div className={styles["img-box"]}>
           <img
@@ -46,11 +41,11 @@ function Header() {
         </IconButton>
 
         <Link to="/" className={styles["signIn-link"]}>
-          <MingcuteExitLine  className={styles.icon} />
+          <MingcuteExitLine className={styles.icon} />
           <span className={styles["login-text"]}>خروج از پنل</span>
         </Link>
       </div>
-    </header>
+    </Card>
   );
 }
 

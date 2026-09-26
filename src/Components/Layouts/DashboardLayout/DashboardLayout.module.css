@@ -17,12 +17,8 @@
       display: grid;
       gap: 1rem;
 
-      border-radius: 0.5rem;
-      padding: 1rem;
-
       inline-size: 100%;
 
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       background-color: var(--color-surface--2);
     }
   }

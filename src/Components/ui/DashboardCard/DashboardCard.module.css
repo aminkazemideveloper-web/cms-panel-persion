@@ -7,20 +7,12 @@
   );
 
   border: 1px solid var(--main-color);
-  border-radius: 0.5rem;
-  corner-shape: round;
+
   padding: 1rem;
   inline-size: min(15rem, calc(100% - 2rem));
-  box-shadow:
-    0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transition: all 0.3s ease-in;
-  backdrop-filter: blur(20px);
+
   &:hover {
     transform: translateY(-4px);
-    box-shadow:
-      0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
   }
   .header {
     display: flex;

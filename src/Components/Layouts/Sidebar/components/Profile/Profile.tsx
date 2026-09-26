@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Profile.module.css";
+import Card from "../../../../shared/Card/Card";
 
 function Profile() {
   const title = "aminkazemideveloper@gmail.com";
@@ -24,10 +25,10 @@ function Profile() {
   }, []);
 
   return (
-    <div className={styles.profile}>
+    <Card className={styles.profile}>
       <span className={styles.title}>امین کاظمی</span>
       <span className={styles.mail}>{text}</span>
-    </div>
+    </Card>
   );
 }
 
