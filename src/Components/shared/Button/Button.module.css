@@ -4,7 +4,7 @@
   align-items: center;
   gap: 1ch;
   padding: 0.4rem;
-  /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); */
+  box-shadow: var(--shadow-light);
   background: linear-gradient(
     180deg,
     var(--bg-color-1) 0%,
@@ -20,7 +20,7 @@
   corner-bottom-right-shape: bevel;
   corner-bottom-left-shape: round;
   border-radius: 0.3rem 0.3rem 0.6rem 0.3rem;
-  font-size: var(--font-size-200);
+  font-size: var(--font-size-300);
   font-weight: 300;
   letter-spacing: -0.5px;
   cursor: pointer;
@@ -28,7 +28,7 @@
 
   &:hover {
     color: var(--color-hover);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    box-shadow: var(--shadow-normal);
     transform: scale(1.001);
   }
 

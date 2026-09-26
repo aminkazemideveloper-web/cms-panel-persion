@@ -1,11 +1,18 @@
 .sub-group {
-  font-size: var(--font-size-200);
+  font-size: var(--font-size-400);
   color: var(--color-primary);
   display: flex;
   align-items: center;
   column-gap: 0.3rem;
+
+  .icon {
+    font-size: 0.8em;
+  }
   .label {
     display: none;
+  }
+  .value {
+    font-size: 0.8em;
   }
 }
 
@@ -14,6 +21,14 @@
   .sub-group {
     .label {
       display: block;
+      font-size: 0.6em;
+    }
+    .icon {
+      font-size: 0.6em;
+    }
+
+    .value {
+      font-size: 0.9em;
     }
   }
 }
@@ -23,9 +38,17 @@
   .sub-group {
     display: flex;
     align-items: center;
-    column-gap: 0.1rem;
+    gap: 0.1rem;
     .label {
       display: block;
+      font-size: 0.8em;
+    }
+    .icon {
+      font-size: 0.8em;
+    }
+
+    .value {
+      font-size: 1em;
     }
   }
 }

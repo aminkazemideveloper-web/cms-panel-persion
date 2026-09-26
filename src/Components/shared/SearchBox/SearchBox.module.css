@@ -23,14 +23,20 @@
     flex-shrink: 0;
     font-size: var(--font-size-400);
     color: var(--color-white);
-    background-color: var(--color-primary);
+    background: linear-gradient(
+      to bottom left,
+      var(--color-primary-dark),
+      var(--color-primary),
+      var(--color-primary-light)
+    );
     transition: all 0.2s ease;
     cursor: pointer;
-
+    > svg {
+      transition: all 0.2s ease;
+    }
     &:hover {
-      background-color: var(--color-primary-hover);
       > svg {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
     }
   }
