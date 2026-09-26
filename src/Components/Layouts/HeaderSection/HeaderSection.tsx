@@ -3,7 +3,6 @@ import { useCategories } from "./useCategories";
 import styles from "./HeaderSection.module.css";
 import NavbarLink from "./components/NavbarLink/NavbarLink";
 import { useLocation } from "react-router";
-import Card from "../../shared/Card/Card";
 
 function HeaderSection() {
   const { categories } = useCategories();
