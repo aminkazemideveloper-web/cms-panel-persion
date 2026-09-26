@@ -12,7 +12,12 @@
   overflow: hidden;
   visibility: hidden;
 
-  background-color: var(--color-surface--3);
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary-light) 30%,
+    var(--color-white),
+    var(--color-primary-light)
+  );
 
   transform: translateY(-100%);
 
