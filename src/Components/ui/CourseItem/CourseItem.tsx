@@ -1,4 +1,3 @@
-import Button from "../../shared/Button/Button";
 import "./CourseItem.css";
 
 import Badge from "../../shared/Badge/Badge";
@@ -11,6 +10,10 @@ import { useCourseItem } from "./useCourseItem";
 import MingcuteNewdotLine from "../../../icons/MingcuteNewdotLine";
 import MingcuteCalendarTimeAddLine from "../../../icons/MingcuteCalendarTimeAddLine";
 import MingcuteCurrencyDollar2Line from "../../../icons/MingcuteCurrencyDollar2Line";
+import IconButton from "../../shared/IconButton/IconButton";
+import MingcuteDelete2Line from "../../../icons/MingcuteDelete2Line";
+
+import MingcutePencil3AiLine from "../../../icons/MingcutePencil3AiLine";
 
 type Props = {
   course: CourseType;
@@ -58,16 +61,15 @@ function CourseItem({ course }: Props) {
             />
           </div>
           <div className="courseItem__left--bottom--left">
-            <Button
+            <IconButton
               color="danger"
-              varient="solid"
               onClick={handleRemoveModalShowButtonClick}
             >
-              حذف
-            </Button>
-            <Button color="primary" varient="solid">
-              ویرایش
-            </Button>
+              <MingcuteDelete2Line className="remove" />
+            </IconButton>
+            <IconButton>
+              <MingcutePencil3AiLine className="edit" />
+            </IconButton>
           </div>
         </div>
       </div>
@@ -78,7 +80,7 @@ function CourseItem({ course }: Props) {
       </div>
 
       <RemoveModal
-        heading={`حذف دوره ی ${title}`}
+        heading="حذف دوره"
         ref={showRemoveModalRef}
         onRemove={handleRemoveCourse}
         title={title}

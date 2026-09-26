@@ -44,7 +44,7 @@ export default function Modal({
             <MingcuteCloseLine />
           </IconButton>
 
-          <div>{heading}</div>
+          <div className="header-text">{heading}</div>
         </header>
 
         <main>{children}</main>

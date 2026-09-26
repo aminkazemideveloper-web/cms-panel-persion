@@ -4,14 +4,16 @@ import type { ArticleType } from "../../../types/article-type";
 
 import RemoveModal from "../../../modals/RemoveModal/RemoveModal";
 
-import { BiSolidEdit, BiTrash } from "react-icons/bi";
 import TiTleSectionItem from "../../shared/TiTleSectionItem/TiTleSectionItem";
 import SubGroup from "../SubGroup/SubGroup";
 import Divider from "../../shared/Divider/Divider";
-import Button from "../../shared/Button/Button";
+
 import { useArticleItem } from "./useArticleItem";
 import MingcuteNewdotLine from "../../../icons/MingcuteNewdotLine";
 import MingcuteCalendarTimeAddLine from "../../../icons/MingcuteCalendarTimeAddLine";
+import IconButton from "../../shared/IconButton/IconButton";
+import MingcuteDelete2Line from "../../../icons/MingcuteDelete2Line";
+import MingcutePencil3AiLine from "../../../icons/MingcutePencil3AiLine";
 
 type Props = {
   article: ArticleType;
@@ -50,19 +52,16 @@ function ArticleItem({ article }: Props) {
             />
           </div>
           <div className={styles.actions}>
-            <Button
-              color="danger"
-              varient="solid"
+            <IconButton
               type="button"
               onClick={handleShowRemoveModal}
+              className={styles.remove}
             >
-              <BiTrash />
-              حذف
-            </Button>
-            <Button color="primary" varient="solid">
-              <BiSolidEdit />
-              ویرایش
-            </Button>
+              <MingcuteDelete2Line />
+            </IconButton>
+            <IconButton className={styles.edit}>
+              <MingcutePencil3AiLine />
+            </IconButton>
           </div>
         </div>
       </div>

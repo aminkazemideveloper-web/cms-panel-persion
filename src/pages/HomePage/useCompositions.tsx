@@ -1,4 +1,3 @@
-
 import useGetAllArticles from "../../services/hooks/articles/useGetAllArticles";
 import { useGetAllCourses } from "../../services/hooks/courses/useGetAllCourses";
 import { useGetAllUsers } from "../../services/hooks/users/useGetAllUsers";
@@ -18,7 +17,7 @@ export const useCompositions = () => {
       icon: <MingcuteNewdotLine />,
       link: "/users",
       count: users?.length ?? 0,
-      color: "red",
+      color: "blue",
     },
     {
       id: 2,
@@ -34,7 +33,7 @@ export const useCompositions = () => {
       icon: <MingcuteChartBarLine />,
       link: "/courses",
       count: courses?.length ?? 0,
-      color: "blue",
+      color: "purple",
     },
   ];
 

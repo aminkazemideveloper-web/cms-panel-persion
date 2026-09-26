@@ -53,11 +53,11 @@
     transform: translateX(30px);
 
     .notif {
-      color: var(--color-danger-hover);
+      /* color: var(--color-danger-hover); */
       > svg {
         opacity: 1;
         transform: translateX(0);
-        color: var(--color-danger-hover);
+        color: var(--color-text);
       }
       &:hover {
         > svg {

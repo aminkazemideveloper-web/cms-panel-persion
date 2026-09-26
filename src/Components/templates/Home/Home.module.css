@@ -1,5 +1,4 @@
 .home {
-
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 1rem;
@@ -9,8 +8,9 @@
       z-index: 1;
       display: inline-block;
       font-size: var(--font-size-700);
+      font-weight: 700;
       background: linear-gradient(
-        270deg,
+        to bottom left,
         var(--color-success-dark),
         var(--color-success-light) 100%
       );
@@ -21,6 +21,23 @@
       -webkit-text-fill-color: transparent;
       padding: 1rem;
       position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        block-size: 70%;
+        inline-size: 0.4rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px var(--color-success-dark);
+        background: linear-gradient(
+          to right,
+          var(--color-success-dark),
+          var(--color-success-light) 100%,
+          var(--color-success-dark)
+        );
+        transform: rotate(10deg) translateX(10px) translateY(-7px);
+      }
     }
   }
   .contant {

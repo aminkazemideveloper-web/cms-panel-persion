@@ -3,15 +3,17 @@
   flex-direction: column;
   row-gap: 0.5rem;
   padding: 1.2rem 1rem;
-  flex: 1;
+  /* flex: 1; */
+  position: relative;
+  font-size: var(--font-size-400);
   .title {
-    font-size: var(--font-size-400);
+    font-size: 1em;
     color: var(--color-secondary);
     font-weight: 600;
     font-family: "morabbaMed";
   }
   .sub {
-    font-size: var(--font-size-300);
+    font-size: 0.7em;
     font-weight: 400;
     color: var(--color-text--sub);
   }

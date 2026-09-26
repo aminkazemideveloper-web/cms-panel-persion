@@ -5,7 +5,7 @@
   outline: none;
   border-radius: 0.5rem;
   .content {
-    header {
+    > header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -14,11 +14,43 @@
       color: var(--color-text);
       border-block-end: 1px solid var(--color-border);
       margin-block-end: 1rem;
+
+      .header-text {
+        font-size: var(--font-size-300);
+        font-weight: 700;
+        color: var(--color-danger);
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          inline-size: 1em;
+          block-size: 1em;
+          top: 0;
+
+          background-color: var(--color-danger-dark);
+          right: -30%;
+          corner-shape: scoop;
+          border-radius: 999rem;
+          animation: infinite 1s infinite linear;
+          opacity: 1;
+        }
+      }
     }
   }
 
   &::backdrop {
     background-color: var(--color-backdrup);
     backdrop-filter: blur(3px);
+  }
+}
+
+@keyframes infinite {
+  from {
+    background-color: var(--color-danger-dark);
+  }
+  to {
+    transform: rotate(360deg);
+    background-color: var(--color-danger-fade);
   }
 }

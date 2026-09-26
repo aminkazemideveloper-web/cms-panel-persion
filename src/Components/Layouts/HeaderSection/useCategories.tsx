@@ -1,4 +1,3 @@
-
 import type { Category } from "../../../types/category-type";
 import MingcuteHome3Line from "../../../icons/MingcuteHome3Line";
 import MingcuteUser1Fill from "../../../icons/MingcuteUser1Fill";
@@ -12,14 +11,14 @@ export const useCategories = () => {
       label: "خانه",
       link: "/",
       icon: <MingcuteHome3Line />,
-      color: "gray",
+      color: "red",
     },
     {
       id: 2,
       label: "کاربران",
       link: "/users",
       icon: <MingcuteUser1Fill />,
-      color: "red",
+      color: "blue",
     },
     {
       id: 3,
@@ -33,7 +32,7 @@ export const useCategories = () => {
       label: "دوره ها",
       link: "/courses",
       icon: <MingcuteNewdotLine />,
-      color: "blue",
+      color: "purple",
     },
   ];
 

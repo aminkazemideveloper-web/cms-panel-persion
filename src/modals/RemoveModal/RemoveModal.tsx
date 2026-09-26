@@ -27,12 +27,14 @@ function RemoveModal({
   return (
     <Modal heading={heading} ref={ref}>
       <div className={clsx(styles["remove-modal"], className)} {...rest}>
-        <div className={styles.title}>آیا از حذف {title} مطمین هستید ؟؟</div>
+        <div className={styles.title}>
+          آیا از حذف <span className={styles.text}>{title}</span> مطمین هستید ؟؟
+        </div>
 
         <div className={styles.actions}>
           <Button
             color="secondary"
-            varient="outlined"
+            varient="solid"
             onClick={handleCancelClickButton}
           >
             انصراف

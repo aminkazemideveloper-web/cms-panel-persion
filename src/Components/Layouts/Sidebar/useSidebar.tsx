@@ -11,21 +11,21 @@ export const useSidebar = () => {
       label: "نام",
       value: "امین",
       icon: <MingcuteUser1Fill />,
-      color: "yellow",
+      color: "blue",
     },
     {
       id: 2,
       label: " خانوادگی نام",
       value: "کاظمی",
       icon: <MingcuteUserQuestionFill />,
-      color: "blue",
+      color: "green",
     },
     {
       id: 3,
       label: " تعداد دوره",
       value: 35,
       icon: <MingcuteNewdotLine />,
-      color: "red",
+      color: "purple",
     },
   ];
 

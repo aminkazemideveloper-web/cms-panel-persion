@@ -51,6 +51,6 @@ textarea {
 }
 
 .purple {
-  --main-color: var(--color-gray);
-  --second-color: var(--color-gray-light);
+  --main-color: var(--color-purple);
+  --second-color: var(--color-purple-light);
 }

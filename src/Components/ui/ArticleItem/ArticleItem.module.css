@@ -40,6 +40,27 @@
         display: flex;
         align-items: center;
         column-gap: 0.2rem;
+
+        .remove {
+          color: var(--color-danger);
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: var(--color-danger-hover);
+            background-color: var(--color-danger-light);
+          }
+        }
+        .edit {
+          color: var(--color-primary);
+
+          border-radius: 999rem;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: var(--color-primary-hover);
+            background-color: var(--color-primary-light);
+          }
+        }
       }
     }
   }

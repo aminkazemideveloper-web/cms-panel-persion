@@ -43,7 +43,7 @@ function FormModal({
           </Button>
           <Button
             type="button"
-            varient="outlined"
+            varient="solid"
             onClick={handleCloseModal}
             color="secondary"
           >
