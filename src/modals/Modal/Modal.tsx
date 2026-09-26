@@ -7,7 +7,7 @@ import {
   type ReactNode,
   type RefObject,
 } from "react";
-import { BiWindowClose } from "react-icons/bi";
+
 import MingcuteCloseLine from "../../icons/MingcuteCloseLine";
 import IconButton from "../../components/shared/IconButton/IconButton";
 

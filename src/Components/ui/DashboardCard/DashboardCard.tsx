@@ -2,7 +2,7 @@ import styles from "./DashboardCard.module.css";
 
 import { Link } from "react-router";
 import clsx from "clsx";
-import { BiSolidLeftArrow } from "react-icons/bi";
+
 import type { DashboardItemType } from "../../../types/dashboard-item-type";
 import MingcuteArrowLeftFill from "../../../icons/MingcuteArrowLeftFill";
 

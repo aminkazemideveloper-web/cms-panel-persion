@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setTheme, toggleTheme } from "../../../redux/slice/themeSlice";
 import type { RootState } from "../../../redux/store";
 import { useEffect } from "react";
-import { BiSolidMoon } from "react-icons/bi";
-import { LuSun } from "react-icons/lu";
+
 import MingcuteMoonStarsFill from "../../../icons/MingcuteMoonStarsFill";
 import MingcuteSunFill from "../../../icons/MingcuteSunFill";
 

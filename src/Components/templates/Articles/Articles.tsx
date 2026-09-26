@@ -1,7 +1,5 @@
 import clsx from "clsx";
 
-import { BiPlus } from "react-icons/bi";
-
 import type { ArticleType } from "../../../types/article-type";
 
 import ArticleItem from "../../ui/ArticleItem/ArticleItem";
