@@ -75,9 +75,11 @@ function CourseItem({ course }: Props) {
         </div>
       </div>
       <div className="coureItem__badge">
-        <Badge color="green" variant="Square" size="md">
-          {discount}%
-        </Badge>
+        {discount != 0 && (
+          <Badge color="green" variant="Square" size="md">
+            {discount}%
+          </Badge>
+        )}
       </div>
 
       <RemoveModal

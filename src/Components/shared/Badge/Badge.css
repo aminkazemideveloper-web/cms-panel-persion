@@ -2,11 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  transition: all 0.2s ease-in;
-}
-.badgeBase:hover {
-  transform: rotate(-45deg);
+  opacity: 1;
+  transform: translateX(0px) translateY(0) rotate(0) scale(0.8);
+  animation: rolled 2s infinite linear;
 }
 
 .circleVariant {
@@ -57,31 +55,7 @@
   font-weight: 500;
 }
 
-@media screen and (min-width: 320px) {
-  .size__lg {
-    padding: 0.5rem;
-    /* font-size: 0.6rem; */
-    font-weight: 300;
-  }
-  .size__md {
-    padding: 0.1rem;
-    /* font-size: 0.3rem; */
-    font-weight: 400;
-  }
-}
-@media screen and (min-width: 320px) {
-  .size__lg {
-    padding: 0.5rem;
-    /* font-size: 0.8rem; */
-    font-weight: 400;
-  }
-  .size__md {
-    padding: 1rem;
-    /* font-size: 1rem; */
-    font-weight: 200;
-  }
-}
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
   .size__lg {
     padding: 0.6rem;
     /* font-size: 0.9rem; */
@@ -93,7 +67,7 @@
     font-weight: 400;
   }
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 992px) {
   .size__lg {
     padding: 0.7rem;
     /* font-size: 1rem; */
@@ -104,5 +78,28 @@
     padding: 0.5rem;
     /* font-size: 0.8rem; */
     font-weight: 400;
+  }
+}
+
+@keyframes rolled {
+  0% {
+    opacity: 1;
+    transform: translateX(0) rotate(0) scale(0.8);
+  }
+  25% {
+    opacity: 0.5;
+    transform: translateX(6px) translateY(-3px) rotate(10deg) scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0) rotate(0) scale(0.8);
+  }
+  75% {
+    opacity: 0.5;
+    transform: translateX(-6px) translateY(-3px) rotate(-10deg) scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0) rotate(0) scale(0.8);
   }
 }
