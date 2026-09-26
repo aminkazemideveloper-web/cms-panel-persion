@@ -1,3 +1,3 @@
-const CARD_COLOR = Object.freeze(["blue", "red", "green", "yellow", "gray"]);
+const CARD_COLOR = Object.freeze(["blue", "red", "green", "yellow", "purple" ,"gray"]);
 
 export type CardColor = (typeof CARD_COLOR)[number];

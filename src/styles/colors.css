@@ -87,6 +87,13 @@
   --color-primary-light: var(--color-blue-100);
   --color-primary-contrast: var(--color-white);
 
+  --color-secondary: var(--color-yellow-500);
+  --color-secondary-hover: var(--color-yellow-600);
+  --color-secondary-dark: var(--color-yellow-900);
+  --color-secondary-fade: var(--color-yellow-300);
+  --color-secondary-light: var(--color-yellow-100);
+  --color-secondary-contrast: var(--color-white);
+
   --color-danger: var(--color-red-500);
   --color-danger-hover: var(--color-red-600);
   --color-danger-dark: var(--color-red-900);
@@ -101,12 +108,12 @@
   --color-success-light: var(--color-green-100);
   --color-success-contrast: var(--color-white);
 
-  --color-secondary: var(--color-yellow-500);
-  --color-secondary-hover: var(--color-yellow-600);
-  --color-secondary-dark: var(--color-yellow-900);
-  --color-secondary-fade: var(--color-yellow-300);
-  --color-secondary-light: var(--color-yellow-100);
-  --color-secondary-contrast: var(--color-white);
+  --color-purple: var(--color-purple-500);
+  --color-purple-hover: var(--color-purple-600);
+  --color-purple-dark: var(--color-purple-900);
+  --color-purple-fade: var(--color-purple-300);
+  --color-purple-light: var(--color-purple-100);
+  --color-purple-contrast: var(--color-white);
 
   --color-gray: var(--color-zinc-500);
   --color-gray-hover: var(--color-zinc-600);

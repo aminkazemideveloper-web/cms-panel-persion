@@ -16,6 +16,7 @@ body {
 }
 
 input,
+textarea,
 select,
 button,
 textarea {
@@ -45,6 +46,11 @@ textarea {
   --second-color: var(--color-secondary-light);
 }
 .gray {
+  --main-color: var(--color-gray);
+  --second-color: var(--color-gray-light);
+}
+
+.purple {
   --main-color: var(--color-gray);
   --second-color: var(--color-gray-light);
 }
