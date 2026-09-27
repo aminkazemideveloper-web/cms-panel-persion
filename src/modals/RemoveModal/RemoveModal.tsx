@@ -9,7 +9,7 @@ type Props = ComponentPropsWithoutRef<"div"> & {
   heading: ComponentProps<typeof Modal>["heading"];
   ref: ComponentProps<typeof Modal>["ref"];
   title: string;
-  loading: boolean;
+  loading?: boolean;
   onRemove: () => void;
 };
 
