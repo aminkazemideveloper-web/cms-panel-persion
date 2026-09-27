@@ -7,8 +7,8 @@ export const useRemoveArticle = () => {
 
   return useMutation({
     mutationFn: removeArticleRequest,
-    onMutate: (articleId: string) => {
-      queryClient.cancelQueries({ queryKey: ["articles"] });
+    onMutate: async (articleId: string) => {
+      await queryClient.cancelQueries({ queryKey: ["articles"] });
 
       const prevArticles = queryClient.getQueryData<ArticleType[]>([
         "articles",

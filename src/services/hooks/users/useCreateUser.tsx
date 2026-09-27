@@ -10,7 +10,7 @@ function useCreateUser() {
   return useMutation({
     mutationFn: createUserRequest,
     onMutate: async (newUser: UserProps) => {
-      queryClient.cancelQueries({ queryKey: ["users"] });
+      await queryClient.cancelQueries({ queryKey: ["users"] });
 
       const prevUsers = queryClient.getQueryData<UserType[]>(["users"]);
 

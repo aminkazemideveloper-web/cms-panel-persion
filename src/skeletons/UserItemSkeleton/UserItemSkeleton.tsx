@@ -14,11 +14,11 @@ function UserItemSkeleton() {
       </div>
 
       <div className={styles["userItem-skeleton__actions"]}>
-        <Skeleton variant="rounded" width="85px" height="38px" />
+        <Skeleton variant="circular" width="1rem" height="1rem" />
 
-        <Skeleton variant="rounded" width="85px" height="38px" />
+        <Skeleton variant="circular" width="1rem" height="1rem" />
 
-        <Skeleton variant="rounded" width="65px" height="38px" />
+        <Skeleton variant="circular" width="1rem" height="1rem" />
       </div>
     </div>
   );

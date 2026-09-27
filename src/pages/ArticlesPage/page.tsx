@@ -20,6 +20,8 @@ function ArticlesPage() {
       <Articles articles={articles!} />
     </>
   );
+
+  return <UsersSkeleton />;
 }
 
 export default ArticlesPage;

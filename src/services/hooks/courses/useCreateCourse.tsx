@@ -8,8 +8,8 @@ export const useCreateCourse = () => {
 
   return useMutation({
     mutationFn: createCourseRequest,
-    onMutate: (newCourse: CourseProps) => {
-      queryClient.cancelQueries({ queryKey: ["courses"] });
+    onMutate: async (newCourse: CourseProps) => {
+      await queryClient.cancelQueries({ queryKey: ["courses"] });
 
       const prevCourses = queryClient.getQueryData(["courses"]);
 

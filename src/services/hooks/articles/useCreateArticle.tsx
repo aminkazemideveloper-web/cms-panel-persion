@@ -8,8 +8,8 @@ function useCreateArticle() {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: createArticle,
-    onMutate: (newArticle: Props) => {
-      queryClient.cancelQueries({ queryKey: ["articles"] });
+    onMutate: async (newArticle: Props) => {
+      await queryClient.cancelQueries({ queryKey: ["articles"] });
 
       const prevArticles = queryClient.getQueryData<ArticleType[]>([
         "articles",

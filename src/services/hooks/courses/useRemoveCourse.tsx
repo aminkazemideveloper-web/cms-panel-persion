@@ -7,7 +7,7 @@ export const useRemoveCourse = () => {
   return useMutation({
     mutationFn: removeCourseRequest,
     onMutate: async (courseId: string) => {
-      queryClient.cancelQueries({ queryKey: ["courses"] });
+      await queryClient.cancelQueries({ queryKey: ["courses"] });
 
       const prevCourses = queryClient.getQueryData<CourseType[]>(["courses"]);
 
