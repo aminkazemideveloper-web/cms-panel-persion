@@ -1,9 +1,10 @@
 .items {
   padding: 1rem;
-  max-height: 600px;
+
+  min-height: 0;
+  /* max-height: 400px; */
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+
+  display: grid;
   gap: 0.5rem;
-  margin-block-end: 2rem;
 }

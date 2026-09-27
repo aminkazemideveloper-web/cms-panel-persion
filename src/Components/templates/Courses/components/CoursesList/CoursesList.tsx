@@ -9,7 +9,7 @@ type Props = {
 function CoursesList({ courses }: Props) {
   return (
     <div className={styles.items}>
-      {courses?.map((course: CourseType) => (
+      {courses?.map((course) => (
         <CourseItem key={course._id} course={course} />
       ))}
     </div>
