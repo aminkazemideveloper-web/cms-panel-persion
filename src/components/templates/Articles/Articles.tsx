@@ -4,7 +4,7 @@ import type { ArticleType } from "../../../types/article-type";
 
 import ArticleItem from "../../ui/ArticleItem/ArticleItem";
 import Button from "../../shared/Button/Button";
-import CreateArticleModal from "../../../modals/CreateArticleModal/CreateArticleModal";
+
 import { useArticles } from "./useArticles";
 
 import styles from "./Articles.module.css";
@@ -12,6 +12,7 @@ import EmptyCard from "../../ui/EmptyCard/EmptyCard";
 import MingcuteAddFill from "../../../icons/MingcuteAddFill";
 
 import useScrollAnimation from "../../../hooks/useScrollAnimation";
+import CreateArticleModal from "../../../modals/createArticleModal/CreateArticleModal";
 
 type Props = {
   articles: ArticleType[];
