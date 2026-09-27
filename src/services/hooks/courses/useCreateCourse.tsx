@@ -7,11 +7,24 @@ export const useCreateCourse = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (newCourse: CourseProps) => createCourseRequest(newCourse),
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["courses"],
-      });
+    mutationFn: createCourseRequest,
+    onMutate: (newCourse: CourseProps) => {
+      queryClient.cancelQueries({ queryKey: ["courses"] });
+
+      const prevCourses = queryClient.getQueryData(["courses"]);
+
+      queryClient.setQueryData<CourseType[]>(["courses"], (old = []) => [
+        ...old,
+        newCourse as CourseType,
+      ]);
+
+      return { prevCourses };
+    },
+    onError: (_error, _variables, onMutateResult) => {
+      queryClient.setQueryData(["coursses"], onMutateResult?.prevCourses);
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ["courses"] });
     },
   });
 };

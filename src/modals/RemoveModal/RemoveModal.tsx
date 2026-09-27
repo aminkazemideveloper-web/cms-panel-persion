@@ -9,6 +9,7 @@ type Props = ComponentPropsWithoutRef<"div"> & {
   heading: ComponentProps<typeof Modal>["heading"];
   ref: ComponentProps<typeof Modal>["ref"];
   title: string;
+  loading: boolean;
   onRemove: () => void;
 };
 
@@ -16,6 +17,7 @@ function RemoveModal({
   title,
   heading,
   ref,
+  loading,
   className,
   onRemove,
   ...rest
@@ -44,6 +46,7 @@ function RemoveModal({
             varient="solid"
             type="button"
             onClick={onRemove}
+            disabled={loading}
           >
             تایید
           </Button>

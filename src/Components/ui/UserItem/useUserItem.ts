@@ -3,10 +3,9 @@ import { toast } from "react-toastify";
 import { useRemoveUser } from "../../../services/hooks/users/useRemoveUser";
 
 export const useUserItem = () => {
-  
   const showEditModalRef = useRef<HTMLDialogElement | null>(null);
   const removeShowModalRef = useRef<HTMLDialogElement | null>(null);
-  const removeMutation = useRemoveUser();
+  const { mutate: removeMutation, isPending: loading } = useRemoveUser();
 
   const handleshowEditUserModalClick = () => {
     showEditModalRef.current?.showModal();
@@ -16,17 +15,25 @@ export const useUserItem = () => {
     removeShowModalRef.current?.showModal();
   };
 
-  const handleRemmoveUser = (id: string) => {
-    removeMutation.mutate(id);
-    removeShowModalRef.current?.close();
-    toast.success("با موفقیت حذف شد");
+  const handleRemoveUser = (id: string) => {
+    removeMutation(id, {
+      onSuccess: () => {
+        removeShowModalRef.current?.close();
+        toast.success("با موفقیت حذف شد");
+      },
+
+      onError: () => {
+        toast.error("حذف کاربر انجام نشد");
+      },
+    });
   };
 
   return {
     removeHandler,
-    handleRemmoveUser,
+    handleRemoveUser,
     handleshowEditUserModalClick,
     showEditModalRef,
     removeShowModalRef,
+    loading,
   };
 };

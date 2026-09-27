@@ -22,11 +22,12 @@ function UserItem({ user }: Props) {
   const { _id, firstname, lastname, email } = user;
 
   const {
-    handleRemmoveUser,
+    handleRemoveUser,
     handleshowEditUserModalClick,
     removeHandler,
     removeShowModalRef,
     showEditModalRef,
+    loading,
   } = useUserItem();
 
   return (
@@ -39,13 +40,6 @@ function UserItem({ user }: Props) {
             alt=""
           />
         </div>
-        {/* <div className={styles.content}>
-          <span className={styles.title}>
-            {firstname} {lastname}
-          </span>
-          <span className={styles.mail}>{email}</span>
-        </div> */}
-
         <TiTleSectionItem title={`${firstname} ${lastname}`} sub={email} />
       </div>
       <div className={styles.actions}>
@@ -67,7 +61,8 @@ function UserItem({ user }: Props) {
         heading="حذف کاربر"
         ref={removeShowModalRef}
         title={`${firstname} ${lastname}`}
-        onRemove={() => handleRemmoveUser(_id)}
+        onRemove={() => handleRemoveUser(_id)}
+        loading={loading}
       />
 
       <EditUserModal ref={showEditModalRef} defaultValues={user} />

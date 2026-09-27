@@ -16,7 +16,6 @@ function SearchBox({ onSearch, loading }: Props) {
   const handleChangeInputValue = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
-
   const searchText = useDebounce<string>(value, 500);
 
   useEffect(() => {
@@ -24,7 +23,7 @@ function SearchBox({ onSearch, loading }: Props) {
   }, [searchText, onSearch]);
 
   return (
-    <label className={styles.search}>
+    <form className={styles.search}>
       <input
         type="text"
         placeholder="جستجو"
@@ -32,7 +31,7 @@ function SearchBox({ onSearch, loading }: Props) {
         onChange={handleChangeInputValue}
       />
       <button type="button">{loading ? <Load /> : <IoSearch />}</button>
-    </label>
+    </form>
   );
 }
 
