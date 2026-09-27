@@ -9,6 +9,9 @@ import { useCourses } from "./useCourses";
 
 import styles from "./Courses.module.css";
 
+import clsx from "clsx";
+import useScrollAnimation from "../../../hooks/useScrollAnimation";
+
 type Props = {
   courses: CourseType[];
 };
@@ -16,14 +19,19 @@ type Props = {
 function Courses({ courses }: Props) {
   const { handleShowCreateCourseButtonClick, showCreateCourseModalRef } =
     useCourses();
+  const containerRef = useScrollAnimation();
 
   return (
-    <div className={styles.wrapper}>
+    <div ref={containerRef} className={styles.wrapper}>
       {courses.length === 0 && (
         <EmptyCard title="در حال حاضر دوره ای ثبت نشده است" />
       )}
-      <CoursesList courses={courses} />
-      <CoursesActions showModal={handleShowCreateCourseButtonClick} />
+      <div className={clsx("animate", "slide-right")}>
+        <CoursesList courses={courses} />
+      </div>
+      <div className={clsx("animate", "fade-up")}>
+        <CoursesActions showModal={handleShowCreateCourseButtonClick} />
+      </div>
       <CreateCourseModal ref={showCreateCourseModalRef} />
     </div>
   );

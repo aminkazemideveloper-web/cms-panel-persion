@@ -13,7 +13,7 @@ type Props = {
 
 function DashboardCard({ item }: Props) {
   return (
-    <Card className={clsx(styles["dashboard-item"], item.color)}>
+    <Card  className={clsx(styles["dashboard-item"], item.color)}>
       <div className={styles.header}>
         <div className={styles.written}>
           <h3>{item.title}</h3>

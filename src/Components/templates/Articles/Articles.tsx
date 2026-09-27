@@ -11,6 +11,8 @@ import styles from "./Articles.module.css";
 import EmptyCard from "../../ui/EmptyCard/EmptyCard";
 import MingcuteAddFill from "../../../icons/MingcuteAddFill";
 
+import useScrollAnimation from "../../../hooks/useScrollAnimation";
+
 type Props = {
   articles: ArticleType[];
 };
@@ -18,15 +20,17 @@ type Props = {
 function Articles({ articles }: Props) {
   const { createArticleModalRef, handleShowCreateCourseModal } = useArticles();
 
+  const containerRef = useScrollAnimation();
+
   return (
-    <div className={styles.articleContainer}>
+    <div ref={containerRef} className={styles.articleContainer}>
       {articles.length === 0 && <EmptyCard title="مقاله ای اضافه نشده" />}
-      <div className={styles.articles__items}>
+      <div className={clsx(styles.articles__items, "animate", "fade-up")}>
         {articles?.map((article) => (
           <ArticleItem key={article._id} article={article} />
         ))}
       </div>
-      <div className={styles["articles__btn"]}>
+      <div className={clsx(styles["articles__btn"], "animate", "slide-right")}>
         <Button
           color="primary"
           varient="solid"
