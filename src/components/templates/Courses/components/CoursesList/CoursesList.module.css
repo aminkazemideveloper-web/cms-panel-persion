@@ -2,9 +2,11 @@
   padding: 1rem;
 
   min-height: 0;
-  /* max-height: 400px; */
+  max-height: 420px;
   overflow-y: auto;
+  scrollbar-color: var(--color-gray-hover) var(--color-gray-hover);
+  scrollbar-width: thin;
 
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
 }

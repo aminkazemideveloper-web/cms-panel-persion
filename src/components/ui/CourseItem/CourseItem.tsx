@@ -1,4 +1,4 @@
-import "./CourseItem.css";
+import styles from "./CourseItem.module.css";
 
 import Badge from "../../shared/Badge/Badge";
 import type { CourseType } from "../../../types/course-type";
@@ -30,19 +30,19 @@ function CourseItem({ course }: Props) {
   } = useCourseItem({ id: _id });
 
   return (
-    <Card className="coureItem__wrapper">
-      <div className="courseItem__right">
+    <Card className={styles.wrapper}>
+      <div className={styles["img-box"]}>
         <img
-          className="courseItem__right--img"
+          className={styles.img}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc0hkVaniI4uOTgJUJOt43oprgmQgM3UOhPA&s"
           alt=""
         />
       </div>
-      <div className="courseItem__left">
+      <div className={styles.content}>
         <TiTleSectionItem title={title} sub={desc} />
 
-        <div className="courseItem__left--bottom">
-          <div className="courseItem__left--bottom--right">
+        <div className={styles.sub}>
+          <div className={styles["sub-detailes"]}>
             <SubGroup
               icon={<MingcuteCurrencyDollar2Line />}
               lable="قیمت"
@@ -61,20 +61,20 @@ function CourseItem({ course }: Props) {
               value={registersCount}
             />
           </div>
-          <div className="courseItem__left--bottom--left">
+          <div className={styles["sub-actions"]}>
             <IconButton
-              className="remove"
+              className={styles.remove}
               onClick={handleRemoveModalShowButtonClick}
             >
               <MingcuteDelete2Line />
             </IconButton>
-            <IconButton className="edit">
+            <IconButton className={styles.edit}>
               <MingcutePencil3AiLine />
             </IconButton>
           </div>
         </div>
       </div>
-      <div className="coureItem__badge">
+      <div className={styles.badge}>
         {discount != 0 && (
           <Badge color="green" variant="Square" size="md">
             {discount}%

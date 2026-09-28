@@ -1,83 +1,89 @@
-.articleItem__wrapper {
-  width: 100%;
-  min-block-size: 6rem;
+.wrapper {
+  min-block-size: 7rem;
   max-block-size: auto;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  position: relative;
 
-  margin-top: 1rem;
   background-color: var(--color-surface--3);
-
   overflow: hidden;
 
-  &:hover {
-    transform: translateY(-3px);
-  }
-
-  .image-box {
-    inline-size: 100%;
-    block-size: 100%;
-
-    .image {
-      inline-size: 100%;
-      block-size: 100%;
+  .img-box {
+    .img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
-
-  .writing {
+  .content {
     display: grid;
-    gap: 0.2rem;
+    padding-block-start: 0.5rem;
 
-    .detailes {
-      background-color: var(--color-surface--1);
-      padding: 0.1rem 0.6rem;
+    .sub {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 0.5rem;
+      padding-inline: 0.5rem;
+      padding-block-end: 0.5rem;
+      background-color: var(--color-surface--1);
 
-      .content {
+      .sub-detailes {
         display: flex;
         align-items: center;
-        column-gap: 0.3rem;
+        gap: 0.5rem;
       }
-      .actions {
+
+      .sub-actions {
         display: flex;
         align-items: center;
-        column-gap: 0.2rem;
 
         .remove {
           color: var(--color-danger);
-          transition: all 0.2s ease;
+          transition: all 0.2s ease-in;
 
           &:hover {
             color: var(--color-danger-hover);
             background-color: var(--color-danger-light);
+            transform: translateY(-2px);
           }
         }
+
         .edit {
           color: var(--color-primary);
-
-          border-radius: 999rem;
-          transition: all 0.2s ease;
+          transition: all 0.2s ease-in;
 
           &:hover {
             color: var(--color-primary-hover);
             background-color: var(--color-primary-light);
+            transform: translateY(-2px);
           }
         }
       }
     }
+  }
+  .badge {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
   }
 }
 
 /* tablet size */
 @media screen and (min-width: 768px) {
-  .articleItem__wrapper {
+  .wrapper {
     min-block-size: 8rem;
   }
 }
 
 /* desktop size */
 @media screen and (min-width: 992px) {
+  .wrapper {
+    min-block-size: 9rem;
+  }
 }

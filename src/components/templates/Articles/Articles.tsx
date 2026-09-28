@@ -25,8 +25,8 @@ function Articles({ articles }: Props) {
 
   return (
     <div ref={containerRef} className={styles.articleContainer}>
-      {articles.length === 0 && <EmptyCard title="مقاله ای اضافه نشده" />}
       <div className={clsx(styles.articles__items, "animate", "fade-up")}>
+        {articles.length === 0 && <EmptyCard title="مقاله ای اضافه نشده" />}
         {articles?.map((article) => (
           <ArticleItem key={article._id} article={article} />
         ))}

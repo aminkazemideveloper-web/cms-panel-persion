@@ -23,10 +23,10 @@ function Courses({ courses }: Props) {
 
   return (
     <div ref={containerRef} className={styles.wrapper}>
-      {courses.length === 0 && (
-        <EmptyCard title="در حال حاضر دوره ای ثبت نشده است" />
-      )}
       <div className={clsx("animate", "slide-right")}>
+        {courses.length === 0 && (
+          <EmptyCard title="در حال حاضر دوره ای ثبت نشده است" />
+        )}
         <CoursesList courses={courses} />
       </div>
       <div className={clsx("animate", "fade-up")}>
