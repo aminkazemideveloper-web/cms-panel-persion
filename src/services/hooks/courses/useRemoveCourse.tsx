@@ -1,6 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { removeCourseRequest } from "../../api/request/courses/remove-course";
 import type { CourseType } from "../../../types/course-type";
+import { toast } from "react-toastify";
 
 export const useRemoveCourse = () => {
   const queryClient = useQueryClient();
@@ -20,6 +21,9 @@ export const useRemoveCourse = () => {
 
     onError: (_error, _variables, onMutateResult) => {
       queryClient.setQueryData(["courses"], onMutateResult?.prevCourses);
+    },
+    onSuccess: () => {
+      toast.success("کاربر با موفقیت حذف شد");
     },
 
     onSettled: () => {

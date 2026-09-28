@@ -16,16 +16,7 @@ export const useUserItem = () => {
   };
 
   const handleRemoveUser = (id: string) => {
-    removeMutation(id, {
-      onSuccess: () => {
-        removeShowModalRef.current?.close();
-        toast.success("با موفقیت حذف شد");
-      },
-
-      onError: () => {
-        toast.error("حذف کاربر انجام نشد");
-      },
-    });
+    removeMutation(id);
   };
 
   return {

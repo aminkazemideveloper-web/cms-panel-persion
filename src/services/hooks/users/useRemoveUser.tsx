@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { removeUser } from "../../api/request/users/remove-user";
 import type { UserType } from "../../../types/user-type";
+import { toast } from "react-toastify";
 
 export const useRemoveUser = () => {
   const queryClient = useQueryClient();
@@ -26,7 +27,10 @@ export const useRemoveUser = () => {
         queryClient.setQueryData(["users"], context.previousUsers);
       }
     },
-    
+    onSuccess: () => {
+      toast.success("کاربر با موفقیت حذف شد");
+    },
+
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: ["users"] });
     },

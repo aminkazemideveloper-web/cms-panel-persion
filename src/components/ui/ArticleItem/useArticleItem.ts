@@ -15,16 +15,7 @@ export const useArticleItem = ({ id }: Props) => {
   };
 
   const handleRemoveArticle = () => {
-    removeMutation.mutate(id, {
-      onSuccess: () => {
-        toast.success("با موفقیت حذف شد");
-        removeModalRef.current?.close();
-      },
-      onError: (error) => {
-        toast.error("مشکلی پیش آمده");
-        console.log(error);
-      },
-    });
+    removeMutation.mutate(id);
   };
 
   return {

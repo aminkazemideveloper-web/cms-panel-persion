@@ -18,16 +18,10 @@ function ThemeSwitch() {
   };
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      dispatch(setTheme(JSON.parse(savedTheme)));
-    }
-  }, [dispatch]);
-
-  useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    localStorage.setItem("theme", JSON.stringify(theme));
+    localStorage.setItem("theme", theme);
   }, [theme]);
+
   return (
     <div
       className={clsx(styles["theme-switch"], styles[theme])}

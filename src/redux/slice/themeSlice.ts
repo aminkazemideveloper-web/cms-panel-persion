@@ -6,8 +6,15 @@ type ThemeState = {
   theme: ThemeType;
 };
 
+const getInitialTheme = (): ThemeType => {
+  const savedTheme = localStorage.getItem("theme");
+
+  return savedTheme === "dark" ? "dark" : "light";
+};
+
+
 const initialState: ThemeState = {
-  theme: "light",
+  theme: getInitialTheme(),
 };
 
 export const themeSlice = createSlice({

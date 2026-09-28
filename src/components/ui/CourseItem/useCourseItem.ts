@@ -15,16 +15,7 @@ export const useCourseItem = ({ id }: Props) => {
   };
 
   const handleRemoveCourse = () => {
-    removeCourseMutation.mutate(id, {
-      onSuccess: () => {
-        toast.success("با موفقیت حذف شد");
-        showRemoveModalRef.current?.close();
-      },
-      onError: () => {
-        toast.error("مشکلی پیش آمده");
-        showRemoveModalRef.current?.close();
-      },
-    });
+    removeCourseMutation.mutate(id);
   };
 
   return {

@@ -5,89 +5,73 @@
   padding-inline: 1rem;
   padding-block-end: 2rem;
   min-block-size: 400px;
+
   .header {
     margin-block: 1rem;
+
     > h2 {
-      text-align: center;
-      z-index: 1;
-      display: block;
-      font-size: var(--font-size-700);
+      position: relative;
+      display: inline-block;
+
+      margin: 0;
+      padding: 1rem;
+
+      font-size: clamp(1.5rem, 4vw, var(--font-size-700));
       font-weight: 700;
+      text-align: center;
+
       background: linear-gradient(
         to bottom left,
         var(--color-success-dark),
         var(--color-success-light) 100%
       );
+
       background-clip: text;
       -webkit-background-clip: text;
 
       color: transparent;
       -webkit-text-fill-color: transparent;
-      padding: 1rem;
-      position: relative;
 
       &::before {
         content: "";
-        display: block;
         position: absolute;
-        block-size: 70%;
-        top: 12%;
-        right: 37%;
+
+        inset-block-start: 15%;
+        inset-inline-start: 0;
+
         inline-size: 0.4rem;
+        block-size: 70%;
+
         border-radius: 0.5rem;
-        box-shadow: 0 2px 4px var(--color-success-dark);
+
         background: linear-gradient(
           to right,
           var(--color-success-dark),
           var(--color-success-light) 100%,
           var(--color-success-dark)
         );
+
+        box-shadow: 0 2px 4px var(--color-success-dark);
+
         transform: rotate(12deg);
       }
     }
   }
+
   .contant {
     display: flex;
     align-items: center;
-    gap: 2rem;
     justify-content: center;
+    gap: 2rem;
     flex-wrap: wrap;
   }
 }
 
-@media screen and (min-width: 576px) {
-  .home {
-    > .header {
-      > h2 {
-        &::before {
-          right: 40%;
-        }
-      }
-    }
-  }
-}
 @media screen and (min-width: 768px) {
   .home {
-    > .header {
+    .header {
       > h2 {
         text-align: start;
-
-        &::before {
-          right: 0%;
-        }
-      }
-    }
-  }
-}
-@media screen and (min-width: 992px) {
-  .home {
-    > .header {
-      > h2 {
-        text-align: start;
-
-        &::before {
-          right: 0%;
-        }
       }
     }
   }

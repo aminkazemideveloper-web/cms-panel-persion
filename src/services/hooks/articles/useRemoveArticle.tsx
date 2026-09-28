@@ -1,6 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { removeArticleRequest } from "../../api/request/articles/remove-article";
 import type { ArticleType } from "../../../types/article-type";
+import { toast } from "react-toastify";
 
 export const useRemoveArticle = () => {
   const queryClient = useQueryClient();
@@ -20,7 +21,9 @@ export const useRemoveArticle = () => {
 
       return { prevArticles };
     },
-
+    onSuccess: () => {
+      toast.success("کاربر با موفقیت حذف شد");
+    },
     onError: (_error, _variables, onMutateResult) => {
       queryClient.setQueryData<ArticleType[]>(
         ["articles"],
