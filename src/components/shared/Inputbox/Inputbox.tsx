@@ -13,6 +13,7 @@ const Inputbox: React.FC<InputProps> = ({
   label,
   icon,
   className,
+  ref,
   ...rest
 }) => {
   const id = useId();
@@ -21,7 +22,7 @@ const Inputbox: React.FC<InputProps> = ({
       <div className={clsx("input-box", className)}>
         {icon && <span>{icon}</span>}
 
-        <input id={id} placeholder=" " {...rest} />
+        <input ref={ref} id={id} placeholder=" " {...rest} />
 
         <label htmlFor={id} className="lableText">
           {label}

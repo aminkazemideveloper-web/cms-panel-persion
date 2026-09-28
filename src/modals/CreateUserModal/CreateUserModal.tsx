@@ -9,19 +9,48 @@ import MingcuteNewdotLine from "../../icons/MingcuteNewdotLine";
 import MingcuteMailSendLine from "../../icons/MingcuteMailSendLine";
 import MingcutePhoneCallLine from "../../icons/MingcutePhoneCallLine";
 import MingcuteEiffelTowerLine from "../../icons/MingcuteEiffelTowerLine";
-import { useCreateUserModal } from "./useCreateUserModal";
+
+import { UserSchema } from "../../vlidators/user-schema";
+import type z from "zod";
+import { toast } from "react-toastify";
+import useCreateUser from "../../services/hooks/users/useCreateUser";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 
 type Props = Pick<ComponentProps<typeof FormModal>, "ref">;
+type Values = z.infer<typeof UserSchema>;
 
 function CreateUserModal({ ref }: Props) {
-  const { register, errors, loading, onSubmit } = useCreateUserModal({ ref });
+  const {
+    handleSubmit,
+    reset,
+    register,
+    formState: { errors },
+  } = useForm<Values>({
+    resolver: zodResolver(UserSchema),
+  });
+
+  const { mutate: createMutation, isPending: loading } = useCreateUser();
+
+  const handleCreateSubmitForm = (values: Values) => {
+    createMutation(values, {
+      onSuccess: () => {
+        toast.success("کاربر جدید با موفقیت ایجاد  شد");
+        reset();
+        ref?.current?.close();
+      },
+      onError: () => {
+        toast.error("مشکلی پیش آمده");
+      },
+    });
+  };
 
   return (
     <FormModal
       disabled={loading}
       heading="ایجاد کاربر جدید"
       ref={ref}
-      onSubmit={onSubmit}
+      onSubmit={handleSubmit(handleCreateSubmitForm)}
     >
       <Inputbox
         type="text"
