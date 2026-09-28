@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { toast } from "react-toastify";
+
 import { useRemoveArticle } from "../../../services/hooks/articles/useRemoveArticle";
 
 type Props = {

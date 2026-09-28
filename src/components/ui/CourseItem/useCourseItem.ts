@@ -1,4 +1,3 @@
-import { toast } from "react-toastify";
 import { useRemoveCourse } from "../../../services/hooks/courses/useRemoveCourse";
 import { useRef } from "react";
 

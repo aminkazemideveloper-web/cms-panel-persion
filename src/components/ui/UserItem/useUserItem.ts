@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { toast } from "react-toastify";
+
 import { useRemoveUser } from "../../../services/hooks/users/useRemoveUser";
 
 export const useUserItem = () => {

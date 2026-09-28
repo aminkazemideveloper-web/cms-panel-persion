@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import styles from "./ThemeSwitch.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setTheme, toggleTheme } from "../../../redux/slice/themeSlice";
+import { toggleTheme } from "../../../redux/slice/themeSlice";
 import type { RootState } from "../../../redux/store";
 import { useEffect } from "react";
 
