@@ -1,11 +1,6 @@
-import { useForm } from "react-hook-form";
 import Inputbox from "../../components/shared/Inputbox/Inputbox";
 import FormModal from "../FormModal/FormModal";
-import { z } from "zod";
-import { UserSchema } from "../../vlidators/user-schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import useCreateUser from "../../services/hooks/users/useCreateUser";
-import { toast } from "react-toastify";
+
 import type { ComponentProps } from "react";
 
 import MingcuteUser1Fill from "../../icons/MingcuteUser1Fill";
@@ -14,43 +9,19 @@ import MingcuteNewdotLine from "../../icons/MingcuteNewdotLine";
 import MingcuteMailSendLine from "../../icons/MingcuteMailSendLine";
 import MingcutePhoneCallLine from "../../icons/MingcutePhoneCallLine";
 import MingcuteEiffelTowerLine from "../../icons/MingcuteEiffelTowerLine";
-
-type Values = z.infer<typeof UserSchema>;
+import { useCreateUserModal } from "./useCreateUserModal";
 
 type Props = Pick<ComponentProps<typeof FormModal>, "ref">;
 
 function CreateUserModal({ ref }: Props) {
-  const {
-    handleSubmit,
-    reset,
-
-    register,
-    formState: { errors },
-  } = useForm<Values>({
-    resolver: zodResolver(UserSchema),
-  });
-
-  const createMutation = useCreateUser();
-
-  const handleCreateSubmitForm = (values: Values) => {
-    createMutation.mutate(values, {
-      onSuccess: () => {
-        toast.success("کاربر جدید با موفقیت ایجاد  شد");
-        ref?.current?.close();
-        reset();
-      },
-      onError: () => {
-        toast.error("مشکلی پیش آمده");
-      },
-    });
-  };
+  const { register, errors, loading, onSubmit } = useCreateUserModal({ ref });
 
   return (
     <FormModal
-      disabled={createMutation.isPending}
+      disabled={loading}
       heading="ایجاد کاربر جدید"
       ref={ref}
-      onSubmit={handleSubmit(handleCreateSubmitForm)}
+      onSubmit={onSubmit}
     >
       <Inputbox
         type="text"
